@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
+using System;
+
+public abstract class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
 {
+
     private static T instance;
     public static T Instance
     {
@@ -11,11 +14,12 @@ public class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
         {
             if (instance == null)
             {
-                instance = (T)FindObjectOfType(typeof(T));
+                Type t = typeof(T);
 
+                instance = (T)FindObjectOfType(t);
                 if (instance == null)
                 {
-                    Debug.LogError(typeof(T) + "is nothing");
+                    Debug.LogError(t + " をアタッチしているGameObjectはありません");
                 }
             }
 
@@ -23,4 +27,25 @@ public class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
         }
     }
 
+    virtual protected void Awake()
+    {
+        // 他のゲームオブジェクトにアタッチされているか調べる
+        // アタッチされている場合は破棄する。
+        CheckInstance();
+    }
+
+    protected bool CheckInstance()
+    {
+        if (instance == null)
+        {
+            instance = this as T;
+            return true;
+        }
+        else if (Instance == this)
+        {
+            return true;
+        }
+        Destroy(this);
+        return false;
+    }
 }

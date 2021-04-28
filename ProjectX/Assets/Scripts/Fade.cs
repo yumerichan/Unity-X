@@ -11,7 +11,7 @@ public class Fade : SingletonMonoBehaviour<Fade>
     /// <summary>フェード中かどうか</summary>
     private bool isFading = false;
 
-    public void GetInstance()
+    public void Start()
     {
         if (this != Instance)
         {
@@ -38,9 +38,7 @@ public class Fade : SingletonMonoBehaviour<Fade>
         GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), this.blackTexture);
     }
 
-    /// <summary>
     /// 画面遷移
-    /// </summary>
     /// <param name='scene'>シーン名</param>
     /// <param name='interval'>暗転にかかる時間(秒)</param>
     public void LoadLevel(string scene, float interval)
@@ -49,9 +47,7 @@ public class Fade : SingletonMonoBehaviour<Fade>
     }
 
 
-    /// <summary>
     /// シーン遷移用コルーチン
-    /// </summary>
     /// <param name='scene'>シーン名</param>
     /// <param name='interval'>暗転にかかる時間(秒)</param>
     private IEnumerator TransScene(string scene, float interval)
