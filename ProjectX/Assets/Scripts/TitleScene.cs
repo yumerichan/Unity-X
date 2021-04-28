@@ -16,12 +16,12 @@ public class TitleScene : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            Fade.Instance.LoadLevel("MainScene", 1.0f);
+            ChangeScene();
         }
     }
 
     void ChangeScene()
     {
-        Fade.Instance.LoadLevel("MainScene", 1.0f);
+        FadeManager.Instance.LoadLevel("MainScene",2.0f);
     }
 }
