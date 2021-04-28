@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class FadeManager : Singleton<FadeManager>
 {
     /// <summary>暗転用黒テクスチャ</summary>
@@ -39,14 +38,20 @@ public class FadeManager : Singleton<FadeManager>
         GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), this.blackTexture);
     }
 
-    /// 画面遷移
-    /// <param name='scene'>シーン名
-    /// <param name='interval'>暗転にかかる時間(秒)
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="scene"> 遷移先</param>
+    /// <param name="interval"> </param>
     public void LoadLevel(string scene, float interval)
     {
         StartCoroutine(TransScene(scene, interval));
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="interval"></param>
     public void FadeStart(float interval)
     {
         StartCoroutine(Trans(interval));
@@ -54,8 +59,6 @@ public class FadeManager : Singleton<FadeManager>
 
 
     /// シーン遷移用コルーチン
-    /// <param name='scene'>シーン名
-    /// <param name='interval'>暗転にかかる時間(秒)
     private IEnumerator TransScene(string scene, float interval)
     {
         //だんだん暗く
