@@ -22,6 +22,7 @@ public class TitleScene : MonoBehaviour
 
     void ChangeScene()
     {
-        FadeManager.Instance.LoadLevel("MainScene",2.0f);
+        FadeManager.Instance.LoadLevel("MainScene", 2.0f);
+        //Loading.Instance.LoadNextScene("MainScene");
     }
 }
