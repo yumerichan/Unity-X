@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Loading.cs" />
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\MyUnityChan\Scripts\MyUnityChan.cs" />
+    <Compile Include="Assets\Object\Player\Player.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
