@@ -105,7 +105,6 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(diff);  //ベクトルの情報をQuaternion.LookRotationに引き渡し回転量を取得しプレイヤーを回転させる
         }
 
-        OldPos = Pos;
         transform.position = Pos;
         rigidbody_.velocity = vel;
     }
