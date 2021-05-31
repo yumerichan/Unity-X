@@ -6,7 +6,8 @@ public class Paladin_Script : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    const float PLAYER_MOVE_POS = 0.01f;
+    const float PLAYER_WALK_MOVE_POS = 0.01f;
+    const float PLAYER_RUN_MOVE_POS = 0.03f;
     const float PLAYER_EVASION = 5.0f;
 
     private Vector3 vPos;
@@ -20,11 +21,20 @@ public class Paladin_Script : MonoBehaviour
     private Rigidbody rigidbody_;
 
     private bool JumpFlg = false;
+    private bool TrunFlg = false;
 
     // 設定したフラグの名前
-    private const string IsRun = "isRun";
-    private const string IsJump = "isJump";
-    private const string IsFall = "isFall";
+    private const string IsRun       = "Is Runing";
+    private const string IsJump      = "Is Jumping";
+    private const string IsWalking   = "Is Walking";
+    private const string IsDamage    = "Is Damage";
+    private const string IsDeath     = "Is Death";
+    private const string IsTrun      = "Is Trun";
+    private const string IsCrouch    = "Is Crouch";
+    private const string IsAttaking  = "Is Attaking";
+    private const string IsAttaking2 = "Is Attaking2";
+    private const string IsAttaking3 = "Is Attaking3";
+
 
     void Start()
     {
@@ -44,33 +54,71 @@ public class Paladin_Script : MonoBehaviour
             //扉に入りたい
         }
 
+        //左右移動
         if (Input.GetKey(KeyCode.A))
         {
-            vMovePos.x -= PLAYER_MOVE_POS;
-            //animator_.SetBool(IsRun, true);
+            if (Input.GetKey(KeyCode.LeftControl))
+            {
+                vMovePos.x -= PLAYER_RUN_MOVE_POS;
+                animator_.SetBool(IsRun, true);
+                animator_.SetBool(IsWalking, false);
+            }
+            else if(animator_.GetBool(IsRun) == false)
+            {
+                vMovePos.x -= PLAYER_WALK_MOVE_POS;
+                animator_.SetBool(IsWalking, true);
+                animator_.SetBool(IsRun, false);
+            }
         }
-
         else if (Input.GetKey(KeyCode.D))
         {
-            vMovePos.x += PLAYER_MOVE_POS;
-            //animator_.SetBool(IsRun, true);
+            if (Input.GetKey(KeyCode.LeftControl))
+            {
+                vMovePos.x += PLAYER_RUN_MOVE_POS;
+                animator_.SetBool(IsRun, true);
+                animator_.SetBool(IsWalking, false);
+            }
+            else
+            {
+                vMovePos.x += PLAYER_WALK_MOVE_POS;
+                animator_.SetBool(IsWalking, true);
+                animator_.SetBool(IsRun, false);
+            }
+        }
+        else
+        {
+            if(animator_.GetBool(IsRun) == true)
+            {
+                animator_.SetBool(IsRun, false);
+            }
+
+            if (animator_.GetBool(IsWalking) == true)
+            {
+                animator_.SetBool(IsWalking, false);
+            }
         }
 
-        //if (Input.GetKeyDown(KeyCode.Space) && JumpFlg == true)
-        //{
-        //    vVel.y = PLAYER_EVASION;
-        //    animator_.SetBool(IsRun, false);
-        //    animator_.SetBool(IsJump, true);
+        //攻撃
+        if (Input.GetKey(KeyCode.Z))
+        {
+            animator_.SetBool(IsAttaking, true);
+        }
 
-        //    JumpFlg = false;
-        //}
-        //else if (vVel.y <= 0.0f && JumpFlg == false && animator_.GetBool(IsFall) == false)
-        //{
-        //    animator_.SetBool(IsJump, false);
-        //    animator_.SetBool(IsFall, true);
-        //}
+            //if (Input.GetKeyDown(KeyCode.Space) && JumpFlg == true)
+            //{
+            //    vVel.y = PLAYER_EVASION;
+            //    animator_.SetBool(IsRun, false);
+            //    animator_.SetBool(IsJump, true);
 
-        vPos = vPos + vMovePos;
+            //    JumpFlg = false;
+            //}
+            //else if (vVel.y <= 0.0f && JumpFlg == false && animator_.GetBool(IsFall) == false)
+            //{
+            //    animator_.SetBool(IsJump, false);
+            //    animator_.SetBool(IsFall, true);
+            //}
+
+            vPos = vPos + vMovePos;
         vMovePos = new Vector3(0.0f, 0.0f, 0.0f);
         transform.position = vPos;
         //rigidbody_.velocity = vVel;
