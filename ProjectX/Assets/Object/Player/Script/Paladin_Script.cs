@@ -55,9 +55,9 @@ public class Paladin_Script : MonoBehaviour
         }
 
         //ç∂âEà⁄ìÆ
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            if (Input.GetKey(KeyCode.LeftControl))
+            if (Input.GetKey(KeyCode.LeftShift))
             {
                 vMovePos.x -= PLAYER_RUN_MOVE_POS;
                 animator_.SetBool(IsRun, true);
@@ -70,9 +70,9 @@ public class Paladin_Script : MonoBehaviour
                 animator_.SetBool(IsRun, false);
             }
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.RightArrow))
         {
-            if (Input.GetKey(KeyCode.LeftControl))
+            if (Input.GetKey(KeyCode.LeftShift))
             {
                 vMovePos.x += PLAYER_RUN_MOVE_POS;
                 animator_.SetBool(IsRun, true);
@@ -104,26 +104,25 @@ public class Paladin_Script : MonoBehaviour
             animator_.SetBool(IsAttaking, true);
         }
 
-            //if (Input.GetKeyDown(KeyCode.Space) && JumpFlg == true)
-            //{
-            //    vVel.y = PLAYER_EVASION;
-            //    animator_.SetBool(IsRun, false);
-            //    animator_.SetBool(IsJump, true);
+        if (Input.GetKeyDown(KeyCode.Space) && JumpFlg == true)
+        {
+            vVel.y = PLAYER_EVASION;
+            animator_.SetBool(IsJump, true);
 
-            //    JumpFlg = false;
-            //}
-            //else if (vVel.y <= 0.0f && JumpFlg == false && animator_.GetBool(IsFall) == false)
-            //{
-            //    animator_.SetBool(IsJump, false);
-            //    animator_.SetBool(IsFall, true);
-            //}
+            JumpFlg = false;
+        }
+        else if (vVel.y <= 0.0f && JumpFlg == false)
+        {
+            animator_.SetBool(IsJump, false);
+        }
 
-            vPos = vPos + vMovePos;
+        vPos = vPos + vMovePos;
         vMovePos = new Vector3(0.0f, 0.0f, 0.0f);
         transform.position = vPos;
         //rigidbody_.velocity = vVel;
 
     }
+
     //private void OnCollisionEnter(Collision collision)
     //{
     //    // ëäéËÇÃñºëOÇéÊìæ
