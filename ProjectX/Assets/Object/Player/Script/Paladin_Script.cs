@@ -8,11 +8,12 @@ public class Paladin_Script : MonoBehaviour
 
     const float PLAYER_WALK_MOVE_POS = 0.01f;
     const float PLAYER_RUN_MOVE_POS = 0.03f;
-    const float PLAYER_EVASION = 5.0f;
+    const float PLAYER_EVASION = 4.0f;
 
     private Vector3 vPos;
     private Vector3 vOldPos;
     private Vector3 vMovePos;
+    private Quaternion vRot;
     private Vector3 vVel;
 
     // Animator コンポーネント
@@ -20,8 +21,14 @@ public class Paladin_Script : MonoBehaviour
 
     private Rigidbody rigidbody_;
 
-    private bool JumpFlg = false;
+    private bool AttackFlg = false;
     private bool TrunFlg = false;
+    private bool LookFlg = true;
+    private bool CrouchFlg = false;
+    private bool IsAnime = false; //アニメ中で途中でフラグを折っては行けないものに
+
+    //体力
+    public int player_HealthPoint = 100;
 
     // 設定したフラグの名前
     private const string IsRun       = "Is Runing";
@@ -47,7 +54,8 @@ public class Paladin_Script : MonoBehaviour
     void Update()
     {
         vOldPos = vPos = transform.position;
-        //vVel = rigidbody_.velocity;
+        vVel = rigidbody_.velocity;
+        vRot = transform.rotation;
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -57,6 +65,8 @@ public class Paladin_Script : MonoBehaviour
         //左右移動
         if (Input.GetKey(KeyCode.LeftArrow))
         {
+            LookFlg = false;
+
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 vMovePos.x -= PLAYER_RUN_MOVE_POS;
@@ -72,6 +82,8 @@ public class Paladin_Script : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
+            LookFlg = true;
+
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 vMovePos.x += PLAYER_RUN_MOVE_POS;
@@ -98,29 +110,43 @@ public class Paladin_Script : MonoBehaviour
             }
         }
 
-        //攻撃
-        if (Input.GetKey(KeyCode.Z))
+        //しゃがみ
+        if(Input.GetKey(KeyCode.LeftControl))
         {
-            animator_.SetBool(IsAttaking, true);
+            animator_.SetBool(IsCrouch, true);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && JumpFlg == true)
+        //攻撃
+        if (Input.GetKey(KeyCode.T))
+        {
+            animator_.SetBool(IsAttaking, true);
+            AttackFlg = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && AttackFlg == false)
         {
             vVel.y = PLAYER_EVASION;
             animator_.SetBool(IsJump, true);
-
-            JumpFlg = false;
         }
-        else if (vVel.y <= 0.0f && JumpFlg == false)
+        else if (vVel.y <= 0.0f)
         {
             animator_.SetBool(IsJump, false);
+        }
+
+        if (LookFlg == true)
+        {
+            vRot.Set(0.0f, 1.0f, 0.0f, 1);
+        }
+        else
+        {
+            vRot.Set(0.0f, -1.0f, 0.0f, 1);
         }
 
         vPos = vPos + vMovePos;
         vMovePos = new Vector3(0.0f, 0.0f, 0.0f);
         transform.position = vPos;
-        //rigidbody_.velocity = vVel;
-
+        rigidbody_.velocity = vVel;
+        transform.rotation = vRot;
     }
 
     //private void OnCollisionEnter(Collision collision)
@@ -135,4 +161,18 @@ public class Paladin_Script : MonoBehaviour
     //        animator_.SetBool(IsFall, false);
     //    }
     //}
+
+    public int GetHp()
+    {
+        return player_HealthPoint;
+    }
+
+    public void SetHp(int hp)
+    {
+        player_HealthPoint = hp;
+    }
+    public Vector3 GetPos()
+    {
+        return transform.position;
+    }
 }
