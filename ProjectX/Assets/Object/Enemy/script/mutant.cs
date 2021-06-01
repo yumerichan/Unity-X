@@ -6,6 +6,8 @@ public class mutant : MonoBehaviour
 {
     // Start is called before the first frame update
     private Animator Animator_;
+
+    public Paladin_Script player;
     void Start()
     {
         Animator_ = GetComponent<Animator>();
@@ -18,10 +20,50 @@ public class mutant : MonoBehaviour
         Vector3 rot = transform.localEulerAngles;
         Vector3 scale = transform.localScale;
 
-        
+
+        Vector3 Pos = player.GetPos();
+
+        float DistanceE2P = SubDistance(Pos, pos);
+
+
+
+
+        if(DistanceE2P<5)
+        {
+            Animator_.SetBool("IsAttack", true);
+        }
+        else if (DistanceE2P <= 10)
+        {
+            Animator_.SetBool("IsWalk", true);
+        }
+        else if (DistanceE2P<=20)
+        {
+            Animator_.SetBool("IsRun", true);
+        }
+
+
+
+
+
 
         transform.position = pos;
         transform.localEulerAngles = rot;
         transform.localScale = scale;
     }
+
+    float SubDistance(Vector3 a,Vector3 b)
+    {
+        float ans = 0;
+        float x, y, z;
+        x = a.x - b.x;
+        y = a.y - b.y;
+        z = a.z - b.z;
+
+        ans = Mathf.Sqrt(x * x + y * y + z * z);
+        return ans;
+    }
+
+
 }
+
+
