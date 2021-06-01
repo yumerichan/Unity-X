@@ -161,12 +161,10 @@ public class Paladin_Script : MonoBehaviour
     //        animator_.SetBool(IsFall, false);
     //    }
     //}
-
     public int GetHp()
     {
         return player_HealthPoint;
     }
-
     public void SetHp(int hp)
     {
         player_HealthPoint = hp;
