@@ -1,0 +1,141 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.4f1 (0abb6314276a) revision 703331'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.985; Version 2009; 64bit' Language: 'ja' Physical Memory: 32688 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/SyunF/OneDrive/デスクトップ/chi-mu/Unity-X/ProjectX
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+54651
+Successfully changed project path to: C:/Users/SyunF/OneDrive/デスクトップ/chi-mu/Unity-X/ProjectX
+C:/Users/SyunF/OneDrive/デスクトップ/chi-mu/Unity-X/ProjectX
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 26.79 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.4f1 (0abb6314276a)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/SyunF/OneDrive/デスクトップ/chi-mu/Unity-X/ProjectX/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2080 SUPER (ID=0x1e81)
+    Vendor:   
+    VRAM:     8010 MB
+    Driver:   27.21.14.6647
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56224
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001694 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 27.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.972 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000602 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.805 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1181 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 80.4 MB.
+System memory in use after: 80.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1644.
+Total: 1.871100 ms (FindLiveObjects: 0.139000 ms CreateObjectMapping: 0.045300 ms MarkObjects: 1.565300 ms  DeleteObjects: 0.120500 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Materials/Skybox/Skybox1_sun_cloud.png
+  artifactKey: Guid(a5fa78cf186e8cc4cae2d3f12780cd85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Materials/Skybox/Skybox1_sun_cloud.png using Guid(a5fa78cf186e8cc4cae2d3f12780cd85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c46eddd6d1c6a6899456663e478f1c6c') in 0.118139 seconds
+  Import took 0.120192 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Materials/Skybox
+  artifactKey: Guid(85ddcd547982178428e23acfeb6ef0d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Materials/Skybox using Guid(85ddcd547982178428e23acfeb6ef0d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d596131995a41ed4563ff7064f928d5') in 0.002139 seconds
+  Import took 0.003875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Materials/Skybox/Sky1_sun_cloud.mat
+  artifactKey: Guid(18a18be315858d64c9a8ce50ccd52e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Materials/Skybox/Sky1_sun_cloud.mat using Guid(18a18be315858d64c9a8ce50ccd52e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a317155e250c6daa32801ac9017caec2') in 0.023243 seconds
+  Import took 0.025000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 51.190642 seconds.
+  path: Assets/TexTure/PlayerTexture
+  artifactKey: Guid(4bf3084b8e671ea4d9d66df477b3616b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TexTure/PlayerTexture using Guid(4bf3084b8e671ea4d9d66df477b3616b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66330c126865886a786e5594927b8d0d') in 0.002164 seconds
+  Import took 0.004596 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000377 seconds.
+  path: Assets/TexTure/PlayerTexture
+  artifactKey: Guid(4bf3084b8e671ea4d9d66df477b3616b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TexTure/PlayerTexture using Guid(4bf3084b8e671ea4d9d66df477b3616b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66330c126865886a786e5594927b8d0d') in 0.002176 seconds
+  Import took 0.003893 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.052887 seconds.
+  path: Assets/TexTure/PlayerTexture/Head.png
+  artifactKey: Guid(efc513fdadf8e3d4fb043afd7d71a577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TexTure/PlayerTexture/Head.png using Guid(efc513fdadf8e3d4fb043afd7d71a577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ec84dcc458b91d2eff61c8d11daf961') in 0.009061 seconds
+  Import took 0.010937 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/TexTure/PlayerTexture/Paladin_diffuse.png
+  artifactKey: Guid(f1d63796087222e418a9dbc7a6ebdb48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TexTure/PlayerTexture/Paladin_diffuse.png using Guid(f1d63796087222e418a9dbc7a6ebdb48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62ccc2b35d5d6065786f8dd80fa73fcb') in 0.007845 seconds
+  Import took 0.009393 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/TexTure/PlayerTexture/Kiem.png
+  artifactKey: Guid(bfc8c7dfa73bb13498214ae3a0c1b77d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TexTure/PlayerTexture/Kiem.png using Guid(bfc8c7dfa73bb13498214ae3a0c1b77d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '039663ec34af4d7b5332648e9e531c57') in 0.005989 seconds
+  Import took 0.007608 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000355 seconds.
+  path: Assets/TexTure/PlayerTexture/Paladin_normal.png
+  artifactKey: Guid(6390ce4169e7c7941b34d2288b42dac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TexTure/PlayerTexture/Paladin_normal.png using Guid(6390ce4169e7c7941b34d2288b42dac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6e87f0a1cf4e42dfd5bbebc49d3d313') in 0.012061 seconds
+  Import took 0.014165 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
