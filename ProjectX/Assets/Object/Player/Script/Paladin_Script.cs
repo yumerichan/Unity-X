@@ -154,7 +154,7 @@ public class Paladin_Script : MonoBehaviour
     //    // ‘ŠŽè‚Ì–¼‘O‚ðŽæ“¾
     //    string name = collision.gameObject.name;
 
-    //    // ‘ŠŽè‚Ì–¼‘O‚ªStage‚¾‚Á‚½Žž
+    //    ‘ŠŽè‚Ì–¼‘O‚ªStage‚¾‚Á‚½Žž
     //    if (name == "Stage")
     //    {
     //        JumpFlg = true;
