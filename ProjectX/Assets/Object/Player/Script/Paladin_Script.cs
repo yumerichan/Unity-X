@@ -45,9 +45,6 @@ public class Paladin_Script : MonoBehaviour
 
     void Start()
     {
-        //フレームレート固定
-        Application.targetFrameRate = 60;
-
         //プレイヤー情報
         vPos = GetComponent<Transform>().position;
         rigidbody_ = GetComponent<Rigidbody>();
