@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         Pos = GetComponent<Transform>().position;
         rigidbody_ = GetComponent<Rigidbody>();
 		this.animator = GetComponent<Animator>();
