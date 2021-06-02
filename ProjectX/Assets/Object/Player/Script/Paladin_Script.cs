@@ -6,9 +6,9 @@ public class Paladin_Script : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    const float PLAYER_WALK_MOVE_POS = 0.01f;
-    const float PLAYER_RUN_MOVE_POS = 0.03f;
-    const float PLAYER_EVASION = 4.0f;
+    const float PLAYER_WALK_MOVE_POS = 0.03f;
+    const float PLAYER_RUN_MOVE_POS = 0.1f;
+    const float PLAYER_EVASION = 6.0f;
 
     private Vector3 vPos;
     private Vector3 vOldPos;
