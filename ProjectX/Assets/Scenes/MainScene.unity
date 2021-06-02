@@ -546,6 +546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1dfba738ef98b94588f9969ae08b81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Gravity_: {x: 0, y: -20, z: 0}
   player_HealthPoint: 100
 --- !u!54 &692254798
 Rigidbody:
@@ -592,10 +593,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.2576289
+  m_Height: 1.8348237
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -1.5804078e-16, y: 0.9020335, z: -0.042371124}
 --- !u!114 &692254801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,7 +642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862704410280102853, guid: 7ff0608ff17cc7b4ab69336ab0999ae5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.151
       objectReference: {fileID: 0}
     - target: {fileID: 6862704410280102853, guid: 7ff0608ff17cc7b4ab69336ab0999ae5, type: 3}
       propertyPath: m_LocalPosition.z

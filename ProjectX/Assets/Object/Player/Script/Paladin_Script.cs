@@ -22,26 +22,45 @@ public class Paladin_Script : MonoBehaviour
     private Rigidbody rigidbody_;
 
     private bool AttackFlg = false;
+    private bool JumpFlg = false;
     private bool TrunFlg = false;
     private bool LookFlg = true;
     private bool CrouchFlg = false;
     private bool IsAnime = false; //アニメ中で途中でフラグを折っては行けないものに
 
+    public Vector3 Gravity_ = new Vector3( 0.0f, -20.0f, 0.0f );
+
     //体力
     public int player_HealthPoint = 100;
 
-    // 設定したフラグの名前
-    private const string IsRun       = "Is Runing";
-    private const string IsJump      = "Is Jumping";
-    private const string IsWalking   = "Is Walking";
-    private const string IsDamage    = "Is Damage";
-    private const string IsDeath     = "Is Death";
-    private const string IsTrun      = "Is Trun";
-    private const string IsCrouch    = "Is Crouch";
-    private const string IsAttaking  = "Is Attaking";
-    private const string IsAttaking2 = "Is Attaking2";
-    private const string IsAttaking3 = "Is Attaking3";
+    enum PlayerState
+    {
+        RUN,
+        JUMP,
+        WALK,
+        DAMAGE,
+        DEATH,
+        TRUN,
+        CROUCH,
+    }; 
 
+    enum PlayerAttackKind
+    {
+        SLASH1,
+        SLASH2,
+        SLASH3,
+        KICK,
+        MELEE1,
+        MELEE2,
+        MELEE3,
+    };
+
+    // 設定したフラグの名前
+    private string[] IsPlayerState = new string[] { "Is Runing", "Is Jumping" , "Is Walking" , "Is Damage" ,
+    "Is Death","Is Trun","Is Crouch"};
+
+    private string[] IsAttacking = new string[] { "Is Attaking", "Is Attaking2", "Is Attaking3", "Is Attaking4",
+        "Is Attaking5" , "Is Attaking6" , "Is Attaking7" };
 
     void Start()
     {
@@ -49,6 +68,7 @@ public class Paladin_Script : MonoBehaviour
         vPos = GetComponent<Transform>().position;
         rigidbody_ = GetComponent<Rigidbody>();
         this.animator_ = GetComponent<Animator>();
+        Physics.gravity = Gravity_;
     }
 
     // Update is called once per frame
@@ -70,15 +90,18 @@ public class Paladin_Script : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                vMovePos.x -= PLAYER_RUN_MOVE_POS;
-                animator_.SetBool(IsRun, true);
-                animator_.SetBool(IsWalking, false);
+                if (JumpFlg == false)
+                {
+                    vMovePos.x -= PLAYER_RUN_MOVE_POS;
+                    animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], true);
+                    animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], false);
+                }
             }
-            else if(animator_.GetBool(IsRun) == false)
+            else if(animator_.GetBool(IsPlayerState[(int)PlayerState.RUN]) == false)
             {
                 vMovePos.x -= PLAYER_WALK_MOVE_POS;
-                animator_.SetBool(IsWalking, true);
-                animator_.SetBool(IsRun, false);
+                animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
+                animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
             }
         }
         else if (Input.GetKey(KeyCode.RightArrow))
@@ -87,51 +110,82 @@ public class Paladin_Script : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                vMovePos.x += PLAYER_RUN_MOVE_POS;
-                animator_.SetBool(IsRun, true);
-                animator_.SetBool(IsWalking, false);
+                if (JumpFlg == false)
+                {
+                    vMovePos.x += PLAYER_RUN_MOVE_POS;
+                    animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], true);
+                    animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], false);
+                }
             }
             else
             {
                 vMovePos.x += PLAYER_WALK_MOVE_POS;
-                animator_.SetBool(IsWalking, true);
-                animator_.SetBool(IsRun, false);
+                animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
+                animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
             }
         }
         else
         {
-            if(animator_.GetBool(IsRun) == true)
+            if(animator_.GetBool(IsPlayerState[(int)PlayerState.RUN]) == true)
             {
-                animator_.SetBool(IsRun, false);
+                animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
             }
 
-            if (animator_.GetBool(IsWalking) == true)
+            if (animator_.GetBool(IsPlayerState[(int)PlayerState.WALK]) == true)
             {
-                animator_.SetBool(IsWalking, false);
+                animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], false);
             }
         }
 
         //しゃがみ
         if(Input.GetKey(KeyCode.LeftControl))
         {
-            animator_.SetBool(IsCrouch, true);
+            animator_.SetBool(IsPlayerState[(int)PlayerState.CROUCH], true);
         }
 
         //攻撃
         if (Input.GetKey(KeyCode.T))
         {
-            animator_.SetBool(IsAttaking, true);
             AttackFlg = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && AttackFlg == false)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             vVel.y = PLAYER_EVASION;
-            animator_.SetBool(IsJump, true);
+            animator_.SetBool(IsPlayerState[(int)PlayerState.JUMP], true);
+            JumpFlg = true;
         }
         else if (vVel.y <= 0.0f)
         {
-            animator_.SetBool(IsJump, false);
+            JumpFlg = false;
+            animator_.SetBool(IsPlayerState[(int)PlayerState.JUMP], false);
+        }
+
+        if(AttackFlg == true)
+        {
+            AttackFlg = false;
+
+            for (int attack_index = 0; attack_index < System.Enum.GetValues(typeof(PlayerAttackKind)).Length - 1; attack_index++)
+            {
+                int current_index = 1;
+
+                if (animator_.GetBool(IsPlayerState[attack_index]) == true)
+                {
+                    //今のままだと連打したら終わる
+                    animator_.SetBool(IsPlayerState[attack_index], false);
+                    current_index += attack_index;
+
+                    if(current_index >= System.Enum.GetValues(typeof(PlayerAttackKind)).Length)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        animator_.SetBool(IsPlayerState[current_index], true);
+                    }
+                }
+                    
+            }
         }
 
         if (LookFlg == true)
