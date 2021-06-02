@@ -23,7 +23,6 @@ public class Paladin_Script : MonoBehaviour
 
     private bool AttackFlg = false;
     private bool JumpFlg = false;
-    private bool TrunFlg = false;
     private bool LookFlg = true;
     private bool CrouchFlg = false;
     private bool IsAnime = false; //アニメ中で途中でフラグを折っては行けないものに
@@ -90,12 +89,9 @@ public class Paladin_Script : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                if (JumpFlg == false)
-                {
                     vMovePos.x -= PLAYER_RUN_MOVE_POS;
                     animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], true);
                     animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], false);
-                }
             }
             else if(animator_.GetBool(IsPlayerState[(int)PlayerState.RUN]) == false)
             {
@@ -110,12 +106,10 @@ public class Paladin_Script : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                if (JumpFlg == false)
-                {
+
                     vMovePos.x += PLAYER_RUN_MOVE_POS;
                     animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], true);
                     animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], false);
-                }
             }
             else
             {
@@ -137,23 +131,25 @@ public class Paladin_Script : MonoBehaviour
             }
         }
 
-        //しゃがみ
-        if(Input.GetKey(KeyCode.LeftControl))
-        {
-            animator_.SetBool(IsPlayerState[(int)PlayerState.CROUCH], true);
-        }
-
         //攻撃
         if (Input.GetKey(KeyCode.T))
         {
             AttackFlg = true;
         }
 
+        //しゃがみまたはジャンプ
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            vVel.y = PLAYER_EVASION;
-            animator_.SetBool(IsPlayerState[(int)PlayerState.JUMP], true);
-            JumpFlg = true;
+            if (animator_.GetBool(IsPlayerState[(int)PlayerState.RUN]) == true)
+            {
+                vVel.y = PLAYER_EVASION;
+                animator_.SetBool(IsPlayerState[(int)PlayerState.JUMP], true);
+                JumpFlg = true;
+            }
+            else
+            {
+                animator_.SetBool(IsPlayerState[(int)PlayerState.CROUCH], true);
+            }
         }
         else if (vVel.y <= 0.0f)
         {
@@ -165,26 +161,37 @@ public class Paladin_Script : MonoBehaviour
         {
             AttackFlg = false;
 
+            //2回目から
             for (int attack_index = 0; attack_index < System.Enum.GetValues(typeof(PlayerAttackKind)).Length - 1; attack_index++)
             {
                 int current_index = 1;
 
-                if (animator_.GetBool(IsPlayerState[attack_index]) == true)
+                bool First_Atk = true;
+
+                if (animator_.GetBool(IsAttacking[attack_index]) == true)
                 {
                     //今のままだと連打したら終わる
-                    animator_.SetBool(IsPlayerState[attack_index], false);
+                   
                     current_index += attack_index;
 
-                    if(current_index >= System.Enum.GetValues(typeof(PlayerAttackKind)).Length)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        animator_.SetBool(IsPlayerState[current_index], true);
-                    }
+                    //if(current_index >= System.Enum.GetValues(typeof(PlayerAttackKind)).Length)
+                    //{
+                    //    break;
+                    //}
+                    //else
+                    //{
+                    animator_.SetBool(IsAttacking[current_index], true);
+                    First_Atk = false;
+                    //break;
+                    //}
+
+                    //animator_.SetBool(IsAttacking[attack_index], false);
                 }
-                    
+                
+                if(First_Atk == true)
+                {
+                    animator_.SetBool(IsAttacking[(int)PlayerAttackKind.SLASH1], true);
+                }
             }
         }
 
