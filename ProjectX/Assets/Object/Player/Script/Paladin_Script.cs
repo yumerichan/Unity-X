@@ -15,6 +15,7 @@ public class Paladin_Script : MonoBehaviour
     private Vector3 vMovePos;
     private Quaternion vRot;
     private Vector3 vVel;
+    private float Interval;
 
     // Animator コンポーネント
     private Animator animator_;
@@ -22,10 +23,13 @@ public class Paladin_Script : MonoBehaviour
     private Rigidbody rigidbody_;
 
     private bool AttackFlg = false;
+    private bool AttakingFlg = false;
     private bool JumpFlg = false;
     private bool LookFlg = true;
     private bool CrouchFlg = false;
     private bool IsAnime = false; //アニメ中で途中でフラグを折っては行けないものに
+    private bool IntervalFlg = false;
+    private int AttackType = -1;
 
     public Vector3 Gravity_ = new Vector3( 0.0f, -20.0f, 0.0f );
 
@@ -58,8 +62,7 @@ public class Paladin_Script : MonoBehaviour
     private string[] IsPlayerState = new string[] { "Is Runing", "Is Jumping" , "Is Walking" , "Is Damage" ,
     "Is Death","Is Trun","Is Crouch"};
 
-    private string[] IsAttacking = new string[] { "Is Attaking", "Is Attaking2", "Is Attaking3", "Is Attaking4",
-        "Is Attaking5" , "Is Attaking6" , "Is Attaking7" };
+    private string IsAttack = "Is Attaking";
 
     void Start()
     {
@@ -68,6 +71,7 @@ public class Paladin_Script : MonoBehaviour
         rigidbody_ = GetComponent<Rigidbody>();
         this.animator_ = GetComponent<Animator>();
         Physics.gravity = Gravity_;
+        animator_.SetInteger("AttackType", AttackType);
     }
 
     // Update is called once per frame
@@ -89,13 +93,20 @@ public class Paladin_Script : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
+                if(AttakingFlg == false)
+                {
                     vMovePos.x -= PLAYER_RUN_MOVE_POS;
-                    animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], true);
-                    animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], false);
+                }
+               
+                animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], true);
+                animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], false);
             }
             else if(animator_.GetBool(IsPlayerState[(int)PlayerState.RUN]) == false)
             {
-                vMovePos.x -= PLAYER_WALK_MOVE_POS;
+                if (AttakingFlg == false)
+                {
+                    vMovePos.x -= PLAYER_WALK_MOVE_POS;
+                }
                 animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
                 animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
             }
@@ -106,14 +117,20 @@ public class Paladin_Script : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
-
+                if (AttakingFlg == false)
+                {
                     vMovePos.x += PLAYER_RUN_MOVE_POS;
-                    animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], true);
-                    animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], false);
+                }
+              
+                animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], true);
+                animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], false);
             }
             else
             {
-                vMovePos.x += PLAYER_WALK_MOVE_POS;
+                if (AttakingFlg == false)
+                {
+                    vMovePos.x += PLAYER_WALK_MOVE_POS;
+                }
                 animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
                 animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
             }
@@ -131,11 +148,7 @@ public class Paladin_Script : MonoBehaviour
             }
         }
 
-        //攻撃
-        if (Input.GetKey(KeyCode.T))
-        {
-            AttackFlg = true;
-        }
+       
 
         //しゃがみまたはジャンプ
         if (Input.GetKeyDown(KeyCode.Space))
@@ -157,43 +170,40 @@ public class Paladin_Script : MonoBehaviour
             animator_.SetBool(IsPlayerState[(int)PlayerState.JUMP], false);
         }
 
-        if(AttackFlg == true)
+        //攻撃
+        if (IntervalFlg == false && Input.GetKey(KeyCode.T))
         {
-            AttackFlg = false;
+            AttackFlg = true;
+            //AttakingFlg = true;
+            IntervalFlg = true;
+        }
+        else if (IntervalFlg == true)
+        {
+            Interval += 1.0f / 60.0f;
 
-            //2回目から
-            for (int attack_index = 0; attack_index < System.Enum.GetValues(typeof(PlayerAttackKind)).Length - 1; attack_index++)
+            if (Interval >= 0.4f)
             {
-                int current_index = 1;
-
-                bool First_Atk = true;
-
-                if (animator_.GetBool(IsAttacking[attack_index]) == true)
-                {
-                    //今のままだと連打したら終わる
-                   
-                    current_index += attack_index;
-
-                    //if(current_index >= System.Enum.GetValues(typeof(PlayerAttackKind)).Length)
-                    //{
-                    //    break;
-                    //}
-                    //else
-                    //{
-                    animator_.SetBool(IsAttacking[current_index], true);
-                    First_Atk = false;
-                    //break;
-                    //}
-
-                    //animator_.SetBool(IsAttacking[attack_index], false);
-                }
-                
-                if(First_Atk == true)
-                {
-                    animator_.SetBool(IsAttacking[(int)PlayerAttackKind.SLASH1], true);
-                }
+                IntervalFlg = false;
+                Interval = 0.0f;
             }
         }
+
+        if (AttackFlg == true)
+        {
+            AttackFlg = false;
+            animator_.SetBool(IsAttack, true);
+            AttackType++;
+            animator_.SetInteger("AttackType", AttackType);
+        }
+
+        if (Input.GetKey(KeyCode.H))
+        {
+            animator_.SetBool(IsAttack, false);
+            AttackType = -1;
+            animator_.SetInteger("AttackType", AttackType);
+        }
+
+        print(animator_.GetInteger("AttackType"));
 
         if (LookFlg == true)
         {
