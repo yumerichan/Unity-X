@@ -6,6 +6,7 @@ public class Paladin_Script : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    const float PLAYER_CROUCH_MOVE_POS = 0.02f;
     const float PLAYER_WALK_MOVE_POS = 0.03f;
     const float PLAYER_RUN_MOVE_POS = 0.1f;
     const float PLAYER_EVASION = 6.0f;
@@ -30,6 +31,8 @@ public class Paladin_Script : MonoBehaviour
     private bool IsAnime = false; //アニメ中で途中でフラグを折っては行けないものに
     private bool IntervalFlg = false;
     private int AttackType = -1;
+    private bool IsNotAttack = false;
+    private float NotAttackInterval = 0.0f;
 
     public Vector3 Gravity_ = new Vector3( 0.0f, -20.0f, 0.0f );
 
@@ -101,6 +104,15 @@ public class Paladin_Script : MonoBehaviour
                 animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], true);
                 animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], false);
             }
+            else if (animator_.GetBool(IsPlayerState[(int)PlayerState.CROUCH]) == true)
+            {
+                if (AttakingFlg == false)
+                {
+                    vMovePos.x -= PLAYER_CROUCH_MOVE_POS;
+                }
+                animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
+                animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
+            }
             else if(animator_.GetBool(IsPlayerState[(int)PlayerState.RUN]) == false)
             {
                 if (AttakingFlg == false)
@@ -125,6 +137,15 @@ public class Paladin_Script : MonoBehaviour
                 animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], true);
                 animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], false);
             }
+            else if (animator_.GetBool(IsPlayerState[(int)PlayerState.CROUCH]) == true)
+            {
+                if (AttakingFlg == false)
+                {
+                    vMovePos.x += PLAYER_CROUCH_MOVE_POS;
+                }
+                animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
+                animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
+            }
             else
             {
                 if (AttakingFlg == false)
@@ -148,8 +169,6 @@ public class Paladin_Script : MonoBehaviour
             }
         }
 
-       
-
         //しゃがみまたはジャンプ
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -161,7 +180,10 @@ public class Paladin_Script : MonoBehaviour
             }
             else
             {
-                animator_.SetBool(IsPlayerState[(int)PlayerState.CROUCH], true);
+                if (animator_.GetBool(IsPlayerState[(int)PlayerState.CROUCH]) == false)
+                    animator_.SetBool(IsPlayerState[(int)PlayerState.CROUCH], true);
+                else
+                    animator_.SetBool(IsPlayerState[(int)PlayerState.CROUCH], false);
             }
         }
         else if (vVel.y <= 0.0f)
@@ -181,7 +203,7 @@ public class Paladin_Script : MonoBehaviour
         {
             Interval += 1.0f / 60.0f;
 
-            if (Interval >= 0.4f)
+            if (Interval >= 0.7f)
             {
                 IntervalFlg = false;
                 Interval = 0.0f;
@@ -191,9 +213,36 @@ public class Paladin_Script : MonoBehaviour
         if (AttackFlg == true)
         {
             AttackFlg = false;
+            NotAttackInterval = 0.0f;
             animator_.SetBool(IsAttack, true);
-            AttackType++;
+
+            if (animator_.GetBool(IsPlayerState[(int)PlayerState.CROUCH]) == false)
+            {
+                AttackType++;
+                animator_.SetInteger("AttackType", AttackType);
+            }
+        }
+
+        if (animator_.GetBool(IsAttack) == true)
+        {
+            NotAttackInterval += 1.0f / 60.0f;
+
+            if(NotAttackInterval >= 1.0f)
+            {
+                animator_.SetBool(IsAttack, false);
+                AttackType = -1;
+                animator_.SetInteger("AttackType", AttackType);
+            }
+        }
+
+        //最後
+        if (animator_.GetInteger("AttackType") == 7)
+        {
+            AttackType = -1;
             animator_.SetInteger("AttackType", AttackType);
+            animator_.SetBool(IsAttack, false);
+            IntervalFlg = true;
+            Interval = -0.2f;
         }
 
         if (Input.GetKey(KeyCode.H))
