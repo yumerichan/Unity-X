@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class LifeGauge : MonoBehaviour
 {
-    private float Life = 100.0f;
+    public int Life = 0;
 
     private Image _image;
+    public Paladin_Script player_;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,21 +18,9 @@ public class LifeGauge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.LeftArrow))
-        {
-            if(Life>=1)
-            {
-                Life--;
-            }
-        }
-        else if(Input.GetKey(KeyCode.RightArrow))
-        {
-            if(Life<100)
-            {
-                Life++;
-            }
-        }
+        Life = player_.GetHp();
 
+        player_.SetHp(Life);
         _image.fillAmount = Life / 100.0f;
     }
 }
