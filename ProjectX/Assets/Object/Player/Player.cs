@@ -8,7 +8,6 @@ public class Player : MonoBehaviour
 	const float PLAYER_EVASION = 1.0f;
 
 	private Rigidbody rigidbody_;
-	private Vector3 Lend;
 	private Vector3 Pos;
     private Vector3 OldPos;
     private Vector3 MovePos;
@@ -26,6 +25,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         Pos = GetComponent<Transform>().position;
         rigidbody_ = GetComponent<Rigidbody>();
 		this.animator = GetComponent<Animator>();
@@ -95,8 +95,7 @@ public class Player : MonoBehaviour
 
         //Lend.x = Input.GetAxis("Horizontal");   // x方向のInputの値を取得
         //Lend.z = Input.GetAxis("Vertical");     // z方向のInputの値を取得
-        rigidbody_.velocity = new Vector3(Lend.x * PLAYER_MOVE_POS, 0, Lend.z * PLAYER_MOVE_POS);
-
+     
         Vector3 diff = Pos - OldPos; //プレイヤーがどの方向に進んでいるかがわかるように、初期位置と現在地の座標差分を取得
         diff.y = 0.0f;
 
