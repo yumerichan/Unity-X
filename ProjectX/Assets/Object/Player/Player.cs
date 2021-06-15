@@ -113,11 +113,35 @@ public class Player : MonoBehaviour
         // 相手の名前を取得
         string name = collision.gameObject.name;
 
-        // 相手の名前がStageだった時
-        if (name == "Stage")
+        // 相手の名前がStage1だった時
+        if (name == "Stage1")
         {
             StageFlg = true;
             animator.SetBool(key_isFall, false);
+        }
+
+        // 相手の名前がStage2だった時
+        else if (name == "Stage2")
+        {
+            StageFlg = true;
+            animator.SetBool(key_isFall, false);
+        }
+
+        // 相手の名前がStage3だった時
+        else if (name == "Stage3")
+        {
+            StageFlg = true;
+            animator.SetBool(key_isFall, false);
+        }
+
+        if (name == "goal1_2")
+        {
+            transform.position = new Vector3(131.0f, Pos.y, Pos.z);
+        }
+
+        else if (name == "goal1_3")
+        {
+            transform.position = new Vector3(-174.5f, Pos.y, Pos.z);
         }
     }
 }

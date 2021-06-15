@@ -276,18 +276,21 @@ public class Paladin_Script : MonoBehaviour
         transform.rotation = vRot;
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    // ‘ŠŽè‚Ì–¼‘O‚ðŽæ“¾
-    //    string name = collision.gameObject.name;
+    private void OnCollisionEnter(Collision collision)
+    {
+        // ‘ŠŽè‚Ì–¼‘O‚ðŽæ“¾
+        string name = collision.gameObject.name;
 
-    //    ‘ŠŽè‚Ì–¼‘O‚ªStage‚¾‚Á‚½Žž
-    //    if (name == "Stage")
-    //    {
-    //        JumpFlg = true;
-    //        animator_.SetBool(IsFall, false);
-    //    }
-    //}
+        if (name == "goal1_2")
+        {
+            transform.position = new Vector3(162.5f, vPos.y, vPos.z);
+        }
+
+        else if (name == "goal1_3")
+        {
+            transform.position = new Vector3(-140.5f, vPos.y, vPos.z);
+        }
+    }
     public int GetHp()
     {
         return player_HealthPoint;
