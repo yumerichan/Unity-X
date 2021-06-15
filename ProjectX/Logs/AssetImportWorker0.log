@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.4f1 (0abb6314276a) revision 703331'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19041.985; Version 2004; 64bit' Language: 'ja' Physical Memory: 32689 MB
+OS: 'Windows 10 Pro; OS build 19041.1052; Version 2004; 64bit' Language: 'ja' Physical Memory: 32689 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ C:/Users/ryury/OneDrive/デスクトップ/Unity-X/ProjectX
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-14903
+13753
 Successfully changed project path to: C:/Users/ryury/OneDrive/デスクトップ/Unity-X/ProjectX
 C:/Users/ryury/OneDrive/デスクトップ/Unity-X/ProjectX
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 23.18 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 23.51 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.4f1 (0abb6314276a)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -35,103 +35,987 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56284
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56856
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001692 seconds.
+Registered in 0.001952 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 23.33 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 23.87 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.874 seconds
+- Completed reload, in  0.902 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000627 seconds.
+Registered in 0.000733 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.677 seconds
+- Completed reload, in  0.693 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1182 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 67.1 MB.
 System memory in use after: 67.1 MB.
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1628.
-Total: 1.419400 ms (FindLiveObjects: 0.137100 ms CreateObjectMapping: 0.039100 ms MarkObjects: 1.177300 ms  DeleteObjects: 0.065000 ms)
+Total: 1.376500 ms (FindLiveObjects: 0.131500 ms CreateObjectMapping: 0.035000 ms MarkObjects: 1.141100 ms  DeleteObjects: 0.067300 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Object/Enemy/Model
-  artifactKey: Guid(495e0faced662ff4095a2a7640ae1e25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Object/Enemy/Model using Guid(495e0faced662ff4095a2a7640ae1e25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4218af29bddac2c5f6e1723632c4ba5') in 0.006646 seconds
-  Import took 0.008189 seconds .
+  path: Assets/UnityChan/Stage/Materials/unitychan_tile5.mat
+  artifactKey: Guid(0fabbaa20a36d468a84e4925db02ecc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Stage/Materials/unitychan_tile5.mat using Guid(0fabbaa20a36d468a84e4925db02ecc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57313266e907cdbec065af8dd4dfe8ad') in 0.206663 seconds
+  Import took 0.208350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/UnityChan/Models/Materials/eyeline.mat
+  artifactKey: Guid(407f97b032a277c44b753ed1c256a3b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/Materials/eyeline.mat using Guid(407f97b032a277c44b753ed1c256a3b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b23b1b507a6c1ce1d0bc8f3a04f53920') in 0.060942 seconds
+  Import took 0.062492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Object/Player/Model/paladin_prop_j_nordstrom.fbx
+  artifactKey: Guid(85e357ab933dd1f45965237de5e4c7e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Player/Model/paladin_prop_j_nordstrom.fbx using Guid(85e357ab933dd1f45965237de5e4c7e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de3e339f5f5fd9b8747bfcd3bfcd247a') in 0.176972 seconds
+  Import took 0.179041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Material/Blue.mat
+  artifactKey: Guid(4b3b2061d9ace4445bc0ebb679ec1dd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Material/Blue.mat using Guid(4b3b2061d9ace4445bc0ebb679ec1dd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '328696c2d39b2719c76865f9e778a885') in 0.014922 seconds
+  Import took 0.016435 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/UnityChan/Models/UnityChanShader/Materials/eyeline.mat
+  artifactKey: Guid(7bac98231102243919a4534a06cc74ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/UnityChanShader/Materials/eyeline.mat using Guid(7bac98231102243919a4534a06cc74ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '139503796be98f14bf4ae34f7cd56227') in 0.007112 seconds
+  Import took 0.008754 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Material/Green.mat
+  artifactKey: Guid(132b1508c2c063b4eaf21132a1e544b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Material/Green.mat using Guid(132b1508c2c063b4eaf21132a1e544b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aff51741dc856e1c049d33302013ca18') in 0.013437 seconds
+  Import took 0.015054 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/UnityChan/Models/Materials/Left.mat
+  artifactKey: Guid(00cf17fb11d4e76448c2096f7ee6aa4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/Materials/Left.mat using Guid(00cf17fb11d4e76448c2096f7ee6aa4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '681ae35b58a51c9b4aaeabee44e4d540') in 0.016264 seconds
+  Import took 0.017854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/UnityChan/Models/Materials/face.mat
+  artifactKey: Guid(4d83bd267b90e934e88637afcd02cb8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/Materials/face.mat using Guid(4d83bd267b90e934e88637afcd02cb8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9436180cfdf015c96a794b15f386ee67') in 0.050744 seconds
+  Import took 0.052445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/Object/Player/Anime/Melee 3.fbx
+  artifactKey: Guid(2c0942328104e7d45b7ed6ad53a2a32d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Player/Anime/Melee 3.fbx using Guid(2c0942328104e7d45b7ed6ad53a2a32d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fed733ed63a2415d81c0d2890e09eac') in 0.045543 seconds
+  Import took 0.047406 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Object/Player/Anime/Kick.fbx
+  artifactKey: Guid(4a5d11f45f1c3a54b9f5602439d2360d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Player/Anime/Kick.fbx using Guid(4a5d11f45f1c3a54b9f5602439d2360d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2938acec1ce733648d5631cb22c47b2') in 0.040756 seconds
+  Import took 0.042538 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/UnityChan/Models/UnityChanShader/Materials/eyebase.mat
+  artifactKey: Guid(c7d8484a18b294b4ea192d6a82f2e0d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/UnityChanShader/Materials/eyebase.mat using Guid(c7d8484a18b294b4ea192d6a82f2e0d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05b087397c20f91ad4fcd781c1638315') in 0.043650 seconds
+  Import took 0.045189 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/UnityChan/Models/UnityChanShader/Materials/body.mat
+  artifactKey: Guid(3b399c72488294c53b66f39632a8fe8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/UnityChanShader/Materials/body.mat using Guid(3b399c72488294c53b66f39632a8fe8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb9d20dabc6653efb825ea96bfe442c0') in 0.084807 seconds
+  Import took 0.086486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/UnityChan/Models/Materials/eyebase.mat
+  artifactKey: Guid(9bec51fc47eda6047ba5cc01addbf46f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/Materials/eyebase.mat using Guid(9bec51fc47eda6047ba5cc01addbf46f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '344cef4064b6c0e8950f05bdf73fb13a') in 0.009446 seconds
+  Import took 0.011254 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/UnityChan/Stage/Materials/unitychan_tile3.mat
+  artifactKey: Guid(00343d49c7d05416cb4a5bddf12aa90d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Stage/Materials/unitychan_tile3.mat using Guid(00343d49c7d05416cb4a5bddf12aa90d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16135baa7f10ed78837155d36e836cb5') in 0.020238 seconds
+  Import took 0.021986 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Object/Player/Anime/Runing.fbx
+  artifactKey: Guid(a557dc5f030e1a14a9fa6a64fb33ebbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Player/Anime/Runing.fbx using Guid(a557dc5f030e1a14a9fa6a64fb33ebbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '650da75422956cbf90fafa567e363d79') in 0.043393 seconds
+  Import took 0.045355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/Object/Player/Anime/Melee 1.fbx
+  artifactKey: Guid(e7af2914194992147b7bc5763ab99083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Player/Anime/Melee 1.fbx using Guid(e7af2914194992147b7bc5763ab99083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd17667dd0925e700ee304a3c1c61660c') in 0.041941 seconds
+  Import took 0.043898 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/UnityChan/Stage/Materials/unitychan_tile4.mat
+  artifactKey: Guid(0f2978993cddc449c99a4e1893ed3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Stage/Materials/unitychan_tile4.mat using Guid(0f2978993cddc449c99a4e1893ed3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a2d6de7211ff128224b41782604f201') in 0.021148 seconds
+  Import took 0.022793 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/UnityChan/Models/Materials/Right.mat
+  artifactKey: Guid(88157e674d7d0314db76940c73b69405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/Materials/Right.mat using Guid(88157e674d7d0314db76940c73b69405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '678a1a2223a14e3b8404f45c3ad80e0d') in 0.013716 seconds
+  Import took 0.015421 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Object/Player/Anime/Melee 2.fbx
+  artifactKey: Guid(192fe1488c480ac45bd8418cee77f51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Player/Anime/Melee 2.fbx using Guid(192fe1488c480ac45bd8418cee77f51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dba5e1c0bfb3038a38cb843107f10319') in 0.042274 seconds
+  Import took 0.044823 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/UnityChan/Models/UnityChanShader/Materials/mat_cheek.mat
+  artifactKey: Guid(4efe8cdcc7b554591bde513d7bde06d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/UnityChanShader/Materials/mat_cheek.mat using Guid(4efe8cdcc7b554591bde513d7bde06d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e21db9c9edf40935227a1febfbbe15a9') in 0.052078 seconds
+  Import took 0.053851 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/UnityChan/Models/Materials/mat_cheek.mat
+  artifactKey: Guid(5f9d44654b83160428d7c4cf276b3572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/Materials/mat_cheek.mat using Guid(5f9d44654b83160428d7c4cf276b3572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bbe2bef3f894a9d7e2754b0609a148c') in 0.008663 seconds
+  Import took 0.010502 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/UnityChan/Models/UnityChanShader/Materials/eye_L1.mat
+  artifactKey: Guid(a0186681a218f4550a84e6f0488e8b61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/UnityChanShader/Materials/eye_L1.mat using Guid(a0186681a218f4550a84e6f0488e8b61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89a5a13c225addd6cad3277a2aa08f78') in 0.024127 seconds
+  Import took 0.025928 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Object/Enemy/Model/mutant/mutant.fbx
+  artifactKey: Guid(b79a338b1cfb085499c3121d9b96cd33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model/mutant/mutant.fbx using Guid(b79a338b1cfb085499c3121d9b96cd33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dbebf1cfefc066f412d40567dbe7b02') in 0.026474 seconds
+  Import took 0.028439 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/Object/Player/sword.fbx
+  artifactKey: Guid(efe93ec8fc77d584ab5dd4d668061259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Player/sword.fbx using Guid(efe93ec8fc77d584ab5dd4d668061259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e9aadec8adb0a5d4df7f341d4f3a40e') in 0.029988 seconds
+  Import took 0.031697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/Material/Red.mat
+  artifactKey: Guid(95db9809601ce8f41a8068cff7b5899d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Material/Red.mat using Guid(95db9809601ce8f41a8068cff7b5899d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e3051fb3e746ccce9c6a1c06eacaf2e') in 0.015815 seconds
+  Import took 0.017828 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/Object/Player/Anime/Walking.fbx
+  artifactKey: Guid(390020efc9f162c4498fe2df4690141a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Player/Anime/Walking.fbx using Guid(390020efc9f162c4498fe2df4690141a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c36640a77f7bce6d69ca1176a8a1db03') in 0.044179 seconds
+  Import took 0.046212 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/UnityChan/Models/Materials/eye_R1.mat
+  artifactKey: Guid(a87def7cf3654cc43add52e645fee2ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/Materials/eye_R1.mat using Guid(a87def7cf3654cc43add52e645fee2ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edc957bdf09fd0e0022f00582b5d05b2') in 0.021127 seconds
+  Import took 0.022829 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/UnityChan/Models/Materials/hair.mat
+  artifactKey: Guid(5ebb6caef8207d243a588a574971408c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/Materials/hair.mat using Guid(5ebb6caef8207d243a588a574971408c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10503798d64cd9b06aee330a80c28ef7') in 0.034670 seconds
+  Import took 0.036360 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/UnityChan/Models/Materials/eye_L1.mat
+  artifactKey: Guid(4987862c1c195e74c86994ba4bcbd812) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/Materials/eye_L1.mat using Guid(4987862c1c195e74c86994ba4bcbd812) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62ab885851a2dbee4dd9ef29f94608a5') in 0.006650 seconds
+  Import took 0.008285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/UnityChan/Models/UnityChanShader/Materials/face.mat
+  artifactKey: Guid(cb35fb92776d24a65827b1d3ab18fe60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/UnityChanShader/Materials/face.mat using Guid(cb35fb92776d24a65827b1d3ab18fe60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaaf83fcf62d63cb018dc0fbf505f88e') in 0.010468 seconds
+  Import took 0.012054 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/Object/Player/Anime/Run Slash.fbx
+  artifactKey: Guid(888fd73442fdbf94dbf4869c56775c0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Player/Anime/Run Slash.fbx using Guid(888fd73442fdbf94dbf4869c56775c0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ff5d08a5d27f8c03d3f8f215abde18f') in 0.043632 seconds
+  Import took 0.045518 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/UnityChan/Models/Materials/skin1.mat
+  artifactKey: Guid(ca131910d5c9a634dbdd38e77111033f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/Materials/skin1.mat using Guid(ca131910d5c9a634dbdd38e77111033f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6a4620d28d4eebf5c79d9626582a4d5') in 0.020238 seconds
+  Import took 0.021813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/UnityChan/Models/Materials/body.mat
+  artifactKey: Guid(bb570020a8c3bad4bbf803af20e78937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/Materials/body.mat using Guid(bb570020a8c3bad4bbf803af20e78937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd069b6f2af6c2bd07d6cef3055eb7009') in 0.010476 seconds
+  Import took 0.012074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/UnityChan/Models/UnityChanShader/Materials/eye_R1.mat
+  artifactKey: Guid(f37e71293707f43b9b83c1925ad01bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/UnityChanShader/Materials/eye_R1.mat using Guid(f37e71293707f43b9b83c1925ad01bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26bb181a5c197554ae3e8144ed73fa0b') in 0.007068 seconds
+  Import took 0.008684 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Object/Player/Anime/RunJump.fbx
+  artifactKey: Guid(c355cd768fc65db4aad3f1b3a5ec6a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Player/Anime/RunJump.fbx using Guid(c355cd768fc65db4aad3f1b3a5ec6a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '283d1633a49146a8c675d7305e64a6ae') in 0.041438 seconds
+  Import took 0.043359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/UnityChan/Stage/Materials/unitychan_tile6.mat
+  artifactKey: Guid(330274cf2c5de4464a4b4b243b59e371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Stage/Materials/unitychan_tile6.mat using Guid(330274cf2c5de4464a4b4b243b59e371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5cc070a58a5d591f7ca89758eba52b1') in 0.019880 seconds
+  Import took 0.021599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/UnityChan/Models/UnityChanShader/Materials/skin1.mat
+  artifactKey: Guid(4b91d906c72fd4447bfabbdd767e31ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/UnityChanShader/Materials/skin1.mat using Guid(4b91d906c72fd4447bfabbdd767e31ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff6210df46c5bb27c20edaa095b085ca') in 0.009850 seconds
+  Import took 0.011458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/UnityChan/Models/UnityChanShader/Materials/hair.mat
+  artifactKey: Guid(0686b679809f14929a8d7f427cbb4da3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/Models/UnityChanShader/Materials/hair.mat using Guid(0686b679809f14929a8d7f427cbb4da3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7338ccca3a6f7218c27cfb0e7552c03a') in 0.011591 seconds
+  Import took 0.013322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.579549 seconds.
+  path: Assets/Object/Enemy
+  artifactKey: Guid(0b53b26034dc400488ea3d907e88503b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy using Guid(0b53b26034dc400488ea3d907e88503b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2421fcb984840e6ea1e53a5940b1aca4') in 0.005557 seconds
+  Import took 0.007210 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005683 seconds.
+  path: Assets/Object/Enemy
+  artifactKey: Guid(0b53b26034dc400488ea3d907e88503b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy using Guid(0b53b26034dc400488ea3d907e88503b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2421fcb984840e6ea1e53a5940b1aca4') in 0.001649 seconds
+  Import took 0.003304 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.159421 seconds.
+  path: Assets/Object/Enemy/Anime
+  artifactKey: Guid(e238ec5c29bf5d7448f81deb7a53d37e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime using Guid(e238ec5c29bf5d7448f81deb7a53d37e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e91b7d6814928dce6b5d29e6855d1c3') in 0.005566 seconds
+  Import took 0.007239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.058433 seconds.
+  path: Assets/Object/Enemy/Anime/crouch idle.fbx
+  artifactKey: Guid(104ad05fa4f38cf4cb635c3390a3727c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/crouch idle.fbx using Guid(104ad05fa4f38cf4cb635c3390a3727c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '331649387a0edc7cd1a7fb5f4cb75f81') in 0.007649 seconds
+  Import took 0.009452 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/Object/Enemy/Anime/standing idle looking ver. 2.fbx
+  artifactKey: Guid(4abeea3894e26644bafbba1e3a5a2554) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing idle looking ver. 2.fbx using Guid(4abeea3894e26644bafbba1e3a5a2554) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '244e2803efd46501174e76854a62c0d1') in 0.006954 seconds
+  Import took 0.008615 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Object/Enemy/Anime/standing taunt chest thump.fbx
+  artifactKey: Guid(4eb35d2ec4ee3cc4ea7762163472e6b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing taunt chest thump.fbx using Guid(4eb35d2ec4ee3cc4ea7762163472e6b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78c403c6cd5fe8a5f82cc8c803446643') in 0.007686 seconds
+  Import took 0.009402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/Object/Enemy/Anime/standing idle.fbx
+  artifactKey: Guid(67f235119af929145997106df29212a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing idle.fbx using Guid(67f235119af929145997106df29212a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5b94320809016b27ff3b9baf1485f95') in 0.007026 seconds
+  Import took 0.008710 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Object/Enemy/Anime/standing melee attack kick ver. 1.fbx
+  artifactKey: Guid(897089def04561f47a328a9b84999fdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing melee attack kick ver. 1.fbx using Guid(897089def04561f47a328a9b84999fdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aca7c41ca57b3d5cee57a5c0ddcd83b') in 0.006895 seconds
+  Import took 0.008453 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/Object/Enemy/Anime/unarmed walk back.fbx
+  artifactKey: Guid(50409f845d4a7ac459797b87a8cd4b2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/unarmed walk back.fbx using Guid(50409f845d4a7ac459797b87a8cd4b2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '366142fc5854918741636cf69e2d4baf') in 0.006625 seconds
+  Import took 0.008172 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/Object/Enemy/Anime/standing block idle.fbx
+  artifactKey: Guid(e6979022629f57f46a14ee8019d6dedb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing block idle.fbx using Guid(e6979022629f57f46a14ee8019d6dedb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '332447f48fc44002bc7268b83ba33024') in 0.007290 seconds
+  Import took 0.008890 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Object/Enemy/Anime/unarmed idle looking ver. 1.fbx
+  artifactKey: Guid(1d3504a11ee09b244a5859538d838a88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/unarmed idle looking ver. 1.fbx using Guid(1d3504a11ee09b244a5859538d838a88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7a261b81e0426319c5c2cd7dbd089ed') in 0.007286 seconds
+  Import took 0.008984 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Object/Enemy/Anime/standing react large gut.fbx
+  artifactKey: Guid(713b39e0b4730864aa4e3add61509589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing react large gut.fbx using Guid(713b39e0b4730864aa4e3add61509589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49d9bd79429190e09cddef4c4b43dbbb') in 0.006894 seconds
+  Import took 0.008650 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Object/Enemy/Anime/standing disarm over shoulder.fbx
+  artifactKey: Guid(c84050da8c0106341bf1cc234b78ef69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing disarm over shoulder.fbx using Guid(c84050da8c0106341bf1cc234b78ef69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e52c3cf59ed1e50cf00d00bc95b94e98') in 0.007936 seconds
+  Import took 0.009541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Object/Enemy/Anime/standing melee run jump attack.fbx
+  artifactKey: Guid(96cd330b8de6a9945b837a85eb3ea357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing melee run jump attack.fbx using Guid(96cd330b8de6a9945b837a85eb3ea357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54f2794b2180c077974c8ca3a24db206') in 0.007584 seconds
+  Import took 0.009282 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000211 seconds.
-  path: Assets/Object/Boss
-  artifactKey: Guid(9458adafe51eb874bb5a659a3caf38b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Object/Boss using Guid(9458adafe51eb874bb5a659a3caf38b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ce8e9432f6950c6fadcbc722a258837') in 0.006402 seconds
-  Import took 0.007859 seconds .
+  path: Assets/Object/Enemy/Anime/unarmed equip underarm.fbx
+  artifactKey: Guid(40e2099e84b44aa46ad21837f55335d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/unarmed equip underarm.fbx using Guid(40e2099e84b44aa46ad21837f55335d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1b5fabf2178dc7e4e698231f39cb64d') in 0.007129 seconds
+  Import took 0.008762 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.277491 seconds.
-  path: Assets/Object/Enemy
-  artifactKey: Guid(0b53b26034dc400488ea3d907e88503b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Object/Enemy using Guid(0b53b26034dc400488ea3d907e88503b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2421fcb984840e6ea1e53a5940b1aca4') in 0.005667 seconds
-  Import took 0.007565 seconds .
+  Time since last request: 0.000202 seconds.
+  path: Assets/Object/Enemy/Anime/standing walk right.fbx
+  artifactKey: Guid(198ad086532c79343a703301d2c261ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing walk right.fbx using Guid(198ad086532c79343a703301d2c261ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83513e1a09fc05db6658b09c1852727c') in 0.007404 seconds
+  Import took 0.008983 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 190.365696 seconds.
+  Time since last request: 0.000200 seconds.
+  path: Assets/Object/Enemy/Anime/standing melee combo attack ver. 2.fbx
+  artifactKey: Guid(e877c59e81609174a8887ad714408620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing melee combo attack ver. 2.fbx using Guid(e877c59e81609174a8887ad714408620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0404dd45114737c5cf1161bcba455a35') in 0.007787 seconds
+  Import took 0.009489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Object/Enemy/Anime/unarmed jump running.fbx
+  artifactKey: Guid(1f382dd7a7cb94e4e8ceb3cf29c0bb09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/unarmed jump running.fbx using Guid(1f382dd7a7cb94e4e8ceb3cf29c0bb09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cd0008271a77e43622ecd5d601cf817') in 0.007282 seconds
+  Import took 0.008949 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Object/Enemy/Anime/standing turn right 90.fbx
+  artifactKey: Guid(0c61178cd9aeca24f98b6086a931e108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing turn right 90.fbx using Guid(0c61178cd9aeca24f98b6086a931e108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaa8830d639aed11ea4a063d966523c9') in 0.007155 seconds
+  Import took 0.008847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Object/Enemy/Anime/standing walk left.fbx
+  artifactKey: Guid(7a418e00df9ce714daca16cab3f4bca3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing walk left.fbx using Guid(7a418e00df9ce714daca16cab3f4bca3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f1e4e08e5e9d5f5837387d8f4d08e26') in 0.007520 seconds
+  Import took 0.009140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/Object/Enemy/Anime/unarmed walk forward.fbx
+  artifactKey: Guid(2d58c92f3f68126489c8d761e3cf4e2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/unarmed walk forward.fbx using Guid(2d58c92f3f68126489c8d761e3cf4e2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50fda62ba6d187417c3c0bda60d10ac1') in 0.007468 seconds
+  Import took 0.009047 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/Object/Enemy/Anime/standing melee attack 360 high.fbx
+  artifactKey: Guid(c2fd1fa1ac23d8144b1cd0fe7ba98448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing melee attack 360 high.fbx using Guid(c2fd1fa1ac23d8144b1cd0fe7ba98448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a7aeac2f72353adcd99ea3e40b35a62') in 0.007394 seconds
+  Import took 0.008971 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Object/Enemy/Anime/standing melee attack 360 low.fbx
+  artifactKey: Guid(20b5818a583b74a46b394940a905f237) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing melee attack 360 low.fbx using Guid(20b5818a583b74a46b394940a905f237) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d6eace253a5d59b3f489ad0b42ef927') in 0.007819 seconds
+  Import took 0.009436 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Object/Enemy/Anime/standing melee attack downward.fbx
+  artifactKey: Guid(b4e839079f7c30d4b8a54acea5e4e381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing melee attack downward.fbx using Guid(b4e839079f7c30d4b8a54acea5e4e381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86a5120839d156610e6b771b09a82d5c') in 0.007493 seconds
+  Import took 0.009118 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Object/Enemy/Anime/standing react large from left.fbx
+  artifactKey: Guid(796e938b2398abb42904b2508c4af756) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing react large from left.fbx using Guid(796e938b2398abb42904b2508c4af756) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85abe7e2571a920df94413b9df1a9726') in 0.007021 seconds
+  Import took 0.008618 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/Object/Enemy/Anime/crouch to standing idle.fbx
+  artifactKey: Guid(32908e2a4a5d835438527dfb04e7afd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/crouch to standing idle.fbx using Guid(32908e2a4a5d835438527dfb04e7afd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '318a8382a1d5bbf50abe3344047073e3') in 0.007100 seconds
+  Import took 0.008741 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/Object/Enemy/Anime/unarmed run back.fbx
+  artifactKey: Guid(b79634c7c94b78948ab84953c507d47d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/unarmed run back.fbx using Guid(b79634c7c94b78948ab84953c507d47d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91d5dc427c507b8433298c62da0ca640') in 0.008138 seconds
+  Import took 0.009772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Object/Enemy/Anime/standing idle looking ver. 1.fbx
+  artifactKey: Guid(5da564f9b7cb74749abbd2c3c51838f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing idle looking ver. 1.fbx using Guid(5da564f9b7cb74749abbd2c3c51838f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce13fc71ecfc74ca45e29411ca1f101e') in 0.007088 seconds
+  Import took 0.008797 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Object/Enemy/Anime/standing melee attack horizontal.fbx
+  artifactKey: Guid(eebaec5af20784848ad5a0fcd174d997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing melee attack horizontal.fbx using Guid(eebaec5af20784848ad5a0fcd174d997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9d98d07801726786d04b5f34429c4ae') in 0.007479 seconds
+  Import took 0.009232 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Object/Enemy/Anime/standing walk back.fbx
+  artifactKey: Guid(0c277f2002c124d47861d33404c04046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing walk back.fbx using Guid(0c277f2002c124d47861d33404c04046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67454da3e5daaf398743264e4a9c73da') in 0.007232 seconds
+  Import took 0.008869 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Object/Enemy/Anime/standing block react large.fbx
+  artifactKey: Guid(252155f0fac185f4093bebb3507c8e5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing block react large.fbx using Guid(252155f0fac185f4093bebb3507c8e5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b15980f2da8661ae0dff38e31b7c702') in 0.007254 seconds
+  Import took 0.009040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Object/Enemy/Anime/standing melee combo attack ver. 3.fbx
+  artifactKey: Guid(34ec85da4ad983648a6c81d2b147474e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing melee combo attack ver. 3.fbx using Guid(34ec85da4ad983648a6c81d2b147474e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99fd0320ae716c608a7689748cb3057b') in 0.007251 seconds
+  Import took 0.008929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Object/Enemy/Anime/unarmed jump.fbx
+  artifactKey: Guid(d7e996d557d543d4a83f434fe25b26be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/unarmed jump.fbx using Guid(d7e996d557d543d4a83f434fe25b26be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2260c775b7a5ffb77e057b570666f565') in 0.007859 seconds
+  Import took 0.009529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Object/Enemy/Anime/standing melee attack backhand.fbx
+  artifactKey: Guid(590f9319126a4e04bbba4dcf0f926214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing melee attack backhand.fbx using Guid(590f9319126a4e04bbba4dcf0f926214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba3579f63016c2507733a7fd0c5def05') in 0.008371 seconds
+  Import took 0.010086 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Object/Enemy/Anime/unarmed idle looking ver. 2.fbx
+  artifactKey: Guid(2ef80d93cb34f7b40bf9e9d053d8d8d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/unarmed idle looking ver. 2.fbx using Guid(2ef80d93cb34f7b40bf9e9d053d8d8d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8052ce8a9e7ecd0f6ad2bafbe82bd6b1') in 0.007343 seconds
+  Import took 0.009270 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Object/Enemy/Anime/standing melee combo attack ver. 1.fbx
+  artifactKey: Guid(69364ff009b8e0642934c309d054b26f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing melee combo attack ver. 1.fbx using Guid(69364ff009b8e0642934c309d054b26f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcaa2cb05545107e268d694c7207891f') in 0.007833 seconds
+  Import took 0.009550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Object/Enemy/Anime/unarmed equip over shoulder.fbx
+  artifactKey: Guid(b584dfbe8b4931840a6329b41c3728d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/unarmed equip over shoulder.fbx using Guid(b584dfbe8b4931840a6329b41c3728d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ebff68b1481b9697247ff0aa87aaa9b') in 0.008407 seconds
+  Import took 0.010121 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Object/Enemy/Anime/unarmed turn left 90.fbx
+  artifactKey: Guid(b1825dd4496e14c489e44ddd76ebefa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/unarmed turn left 90.fbx using Guid(b1825dd4496e14c489e44ddd76ebefa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fc3797e5981b2f3c886c02fdc5e8313') in 0.008070 seconds
+  Import took 0.009767 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000329 seconds.
+  path: Assets/Object/Enemy/Anime/unarmed run forward.fbx
+  artifactKey: Guid(9e4344a6955854c4eb9382f9794394f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/unarmed run forward.fbx using Guid(9e4344a6955854c4eb9382f9794394f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba425ced439e839f0eb5f80f791aba33') in 0.007042 seconds
+  Import took 0.008733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Object/Enemy/Anime/standing run forward.fbx
+  artifactKey: Guid(f3f18ce95d2b8f74b834c69bd89b8e74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing run forward.fbx using Guid(f3f18ce95d2b8f74b834c69bd89b8e74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76ca86cb20cfdf4d2fdbb89eaa4517df') in 0.007459 seconds
+  Import took 0.009217 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Object/Enemy/Anime/standing walk forward.fbx
+  artifactKey: Guid(bcd0fe3d5ee13e343a5d7916b3621ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing walk forward.fbx using Guid(bcd0fe3d5ee13e343a5d7916b3621ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15718e3ac89b7a5f3c4fa13f8757739b') in 0.007447 seconds
+  Import took 0.009114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Object/Enemy/Anime/unarmed idle.fbx
+  artifactKey: Guid(b04a886041def30409ce8f02a68f64b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/unarmed idle.fbx using Guid(b04a886041def30409ce8f02a68f64b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cc2654c0760f325ba4be80868244533') in 0.007156 seconds
+  Import took 0.008820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Object/Enemy/Anime/standing jump.fbx
+  artifactKey: Guid(5f4e24880e442aa458c76b3660c3f5a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing jump.fbx using Guid(5f4e24880e442aa458c76b3660c3f5a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35810352080a9343e494cb628e83e807') in 0.007987 seconds
+  Import took 0.009655 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Object/Enemy/Anime/standing melee attack kick ver. 2.fbx
+  artifactKey: Guid(223c8b7aaf344c84e94cc7c2e4faae2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing melee attack kick ver. 2.fbx using Guid(223c8b7aaf344c84e94cc7c2e4faae2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b9be43ff7dac5563574ddee82e9ae7') in 0.007659 seconds
+  Import took 0.009314 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Object/Enemy/Anime/standing disarm underarm.fbx
+  artifactKey: Guid(b93f1bb02db483140b9b23c9d7668586) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing disarm underarm.fbx using Guid(b93f1bb02db483140b9b23c9d7668586) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52d4e7befcc46b93790ad0328126724b') in 0.007954 seconds
+  Import took 0.009598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/Object/Enemy/Anime/standing react large from right.fbx
+  artifactKey: Guid(71df309f120945d46818ad5a9dbff2b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing react large from right.fbx using Guid(71df309f120945d46818ad5a9dbff2b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bfa9aa36489a13a5b7253cdc934f396') in 0.007442 seconds
+  Import took 0.009396 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Object/Enemy/Anime/standing run back.fbx
+  artifactKey: Guid(30057ba1679d39f48ad5bfb4fa56e909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing run back.fbx using Guid(30057ba1679d39f48ad5bfb4fa56e909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '800e8d4c9eec7e2ce46f5bb0050adfde') in 0.007443 seconds
+  Import took 0.009263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Object/Enemy/Anime/unarmed turn right 90.fbx
+  artifactKey: Guid(4f0dcd067220b4545becb7f3b6a557de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/unarmed turn right 90.fbx using Guid(4f0dcd067220b4545becb7f3b6a557de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '784f133fbb0f5243419a82597616d39f') in 0.007394 seconds
+  Import took 0.009196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Object/Enemy/Anime/standing turn left 90.fbx
+  artifactKey: Guid(34861c52e6cc1cc4a87a429e78a41efd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing turn left 90.fbx using Guid(34861c52e6cc1cc4a87a429e78a41efd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e779f2f5488c107d740bc493c9f8fb7') in 0.007862 seconds
+  Import took 0.009625 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Object/Enemy/Anime/standing taunt battlecry.fbx
+  artifactKey: Guid(a94af722380d8544a90be19a50e3b26e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Anime/standing taunt battlecry.fbx using Guid(a94af722380d8544a90be19a50e3b26e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84e705ade00dae90871a218581cd9396') in 0.007077 seconds
+  Import took 0.008875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.627676 seconds.
   path: Assets/Object/Enemy/Animetion
   artifactKey: Guid(0a350cd075997024abf5d8d98fe4c2a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Object/Enemy/Animetion using Guid(0a350cd075997024abf5d8d98fe4c2a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8ab2fe50d8039ec09c4b27bd054417a') in 0.006171 seconds
-  Import took 0.007854 seconds .
+Start importing Assets/Object/Enemy/Animetion using Guid(0a350cd075997024abf5d8d98fe4c2a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8ab2fe50d8039ec09c4b27bd054417a') in 0.005438 seconds
+  Import took 0.007181 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.928351 seconds.
+  Time since last request: 0.452779 seconds.
+  path: Assets/Object/Enemy/Model
+  artifactKey: Guid(495e0faced662ff4095a2a7640ae1e25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model using Guid(495e0faced662ff4095a2a7640ae1e25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4218af29bddac2c5f6e1723632c4ba5') in 0.004941 seconds
+  Import took 0.006578 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.360934 seconds.
+  path: Assets/Object/Enemy/script
+  artifactKey: Guid(e0904297f1e210f4d806cbeae3202243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/script using Guid(e0904297f1e210f4d806cbeae3202243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f46dcfcd0f2d9b586b2f4f0ba67ddba') in 0.005455 seconds
+  Import took 0.007204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.904859 seconds.
+  path: Assets/Object/Player
+  artifactKey: Guid(d37d2da2906a1de40a3a91915a688b4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Player using Guid(d37d2da2906a1de40a3a91915a688b4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '772f22f1e2c563a8d36629de743dd373') in 0.005279 seconds
+  Import took 0.007084 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.055375 seconds.
+  path: Assets/Object/Player/Sword_albedo.jpg
+  artifactKey: Guid(0a9c2ce1911042b418d95861dd99c3bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Player/Sword_albedo.jpg using Guid(0a9c2ce1911042b418d95861dd99c3bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c5668d912787cba8497182e1e3f48b9') in 0.023030 seconds
+  Import took 0.024857 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.611651 seconds.
+  path: Assets/Object/Item
+  artifactKey: Guid(3aa84c6896dfea84abbbf189f549ca2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Item using Guid(3aa84c6896dfea84abbbf189f549ca2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7c4671546fb2395725645016ebb13ca') in 0.004913 seconds
+  Import took 0.006546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.607725 seconds.
+  path: Assets/Object/Gimmick
+  artifactKey: Guid(93f9c14d3165c3f40be811cdab4d0b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Gimmick using Guid(93f9c14d3165c3f40be811cdab4d0b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83c2ae7bcade38ccf1c488b26863c359') in 0.004992 seconds
+  Import took 0.006618 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.188820 seconds.
   path: Assets/Object/Enemy/Animetion/mutant.controller
   artifactKey: Guid(0c29dfdfee810694db4930ca26b728b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Object/Enemy/Animetion/mutant.controller using Guid(0c29dfdfee810694db4930ca26b728b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fab1d1c91592d26031d36d383092d90a') in 0.034380 seconds
-  Import took 0.036092 seconds .
+Start importing Assets/Object/Enemy/Animetion/mutant.controller using Guid(0c29dfdfee810694db4930ca26b728b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fab1d1c91592d26031d36d383092d90a') in 0.007604 seconds
+  Import took 0.009486 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.987559 seconds.
+  Time since last request: 12.819741 seconds.
   path: Assets/Object/Enemy/script/mutant.cs
   artifactKey: Guid(4a6314f4642742f4fbb3667c885133f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Object/Enemy/script/mutant.cs using Guid(4a6314f4642742f4fbb3667c885133f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '835432241e63bf3a14b81d87da176cd0') in 0.003681 seconds
-  Import took 0.005278 seconds .
+Start importing Assets/Object/Enemy/script/mutant.cs using Guid(4a6314f4642742f4fbb3667c885133f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8252d7d13d4dad713bfbe7ddfa8a3a9') in 0.005405 seconds
+  Import took 0.007110 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 595.129410 seconds.
+  path: Assets/Object/Enemy/Model/zombie
+  artifactKey: Guid(e79aa09c5110c5c4585915d6396b1a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model/zombie using Guid(e79aa09c5110c5c4585915d6396b1a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3e2054865389080de2beeb5f9bcb484') in 0.005494 seconds
+  Import took 0.007632 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.454620 seconds.
+  path: Assets/Object/Enemy/Model/mutant
+  artifactKey: Guid(6d1a1da4aa531b94db0fc2e64c97288b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model/mutant using Guid(6d1a1da4aa531b94db0fc2e64c97288b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b57a2d974d7c57189db0cae304e4933') in 0.001709 seconds
+  Import took 0.003406 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001094 seconds.
+  path: Assets/Object/Enemy/Model/mutant
+  artifactKey: Guid(6d1a1da4aa531b94db0fc2e64c97288b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model/mutant using Guid(6d1a1da4aa531b94db0fc2e64c97288b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b57a2d974d7c57189db0cae304e4933') in 0.001876 seconds
+  Import took 0.003814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.039378 seconds.
+  path: Assets/Object/Enemy/Model/mutant/Mutant_diffuse 1.png
+  artifactKey: Guid(ca8605e12d6f4b649b9652c6a3a9cee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model/mutant/Mutant_diffuse 1.png using Guid(ca8605e12d6f4b649b9652c6a3a9cee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51191f75d6870402066a8ff952224447') in 0.014234 seconds
+  Import took 0.016038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/Object/Enemy/Model/mutant/Mutant_normal 1.png
+  artifactKey: Guid(2a6df0a223a22bf4fbf345c17e69b7a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model/mutant/Mutant_normal 1.png using Guid(2a6df0a223a22bf4fbf345c17e69b7a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a244344075482cf0710b397bfd81f49') in 0.016406 seconds
+  Import took 0.018134 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001464 seconds.
+  path: Assets/Object/Enemy/Model/mutant/Mutant_normal 1.png
+  artifactKey: Guid(2a6df0a223a22bf4fbf345c17e69b7a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model/mutant/Mutant_normal 1.png using Guid(2a6df0a223a22bf4fbf345c17e69b7a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a244344075482cf0710b397bfd81f49') in 0.010932 seconds
+  Import took 0.014237 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.030541 seconds.
+  path: Assets/Object/Enemy/Model/zombie/zombie.fbx
+  artifactKey: Guid(77e0799ff944ac944b6a67a09eff6b50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model/zombie/zombie.fbx using Guid(77e0799ff944ac944b6a67a09eff6b50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '224acd05b150f863e881f3450c871e5d') in 0.025144 seconds
+  Import took 0.027163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 271.633218 seconds.
+  path: Assets/Object/Enemy/Animetion/zombe.controller
+  artifactKey: Guid(8efee108c62563f4bb1f5395dde3f9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Animetion/zombe.controller using Guid(8efee108c62563f4bb1f5395dde3f9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '145dde73ae949714ec591f02efcdee59') in 0.006208 seconds
+  Import took 0.008874 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 62.627313 seconds.
+  path: Assets/Object/Enemy/Model/zombie/zombie 1.fbx
+  artifactKey: Guid(66d4ad68b43adc447baf6ea161a428ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model/zombie/zombie 1.fbx using Guid(66d4ad68b43adc447baf6ea161a428ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f189744a3444c4d454c01be0266f7024') in 0.034569 seconds
+  Import took 0.036553 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 94.249166 seconds.
+  path: Assets/Object/Enemy/Model/zombie/zombie (1).fbx
+  artifactKey: Guid(6ac5ed49f3e967a4c9bd30423eafb5bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model/zombie/zombie (1).fbx using Guid(6ac5ed49f3e967a4c9bd30423eafb5bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c616d357afe48b8ffe4d50dc88bfe2b') in 0.035123 seconds
+  Import took 0.037158 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 179.573022 seconds.
+  path: Assets/Object/Enemy/Model/zombie/zombie@Zombie Idle.fbx
+  artifactKey: Guid(aeecafe55f3bae6478be2d1ab41cd24c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model/zombie/zombie@Zombie Idle.fbx using Guid(aeecafe55f3bae6478be2d1ab41cd24c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f86819a9ebba9af693803458ded5a6a1') in 0.052815 seconds
+  Import took 0.055321 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 95.984467 seconds.
+  path: Assets/Object/Enemy/Model/zombie/zombie@Mutant Punch.fbx
+  artifactKey: Guid(9a3d741954a2c3144904fda68763b81f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model/zombie/zombie@Mutant Punch.fbx using Guid(9a3d741954a2c3144904fda68763b81f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a32237e68e6e4cc4f13f4828bb47b655') in 0.040295 seconds
+  Import took 0.042953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 126.568465 seconds.
+  path: Assets/Object/Enemy/Model/zombie/zombie@Mutant Walking.fbx
+  artifactKey: Guid(688f04aaf8ad123488673c3c3b099aa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model/zombie/zombie@Mutant Walking.fbx using Guid(688f04aaf8ad123488673c3c3b099aa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6db2681443d00689c069ddc4e126b6f7') in 0.050651 seconds
+  Import took 0.052616 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 44.857676 seconds.
+  path: Assets/Object/Enemy/Model/zombie/zombie@Zombie Run.fbx
+  artifactKey: Guid(95b619e62bd82a14d88e29cda23abb1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model/zombie/zombie@Zombie Run.fbx using Guid(95b619e62bd82a14d88e29cda23abb1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23d9e4a726b8203fc07901bebd72a714') in 0.045728 seconds
+  Import took 0.047697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 59.611995 seconds.
+  path: Assets/Object/Enemy/Model/zombie/zombie@Standing Jump.fbx
+  artifactKey: Guid(ddf7094c545e4fa41bf991d795483a88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/Model/zombie/zombie@Standing Jump.fbx using Guid(ddf7094c545e4fa41bf991d795483a88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2164e38a79f4fb91cfa01837e1cf101a') in 0.025036 seconds
+  Import took 0.027147 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 322.591361 seconds.
+  path: Assets/Object/Enemy/script/zombie.cs
+  artifactKey: Guid(ac0d1bddab5d10b4bb7f539ead5d563e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/script/zombie.cs using Guid(ac0d1bddab5d10b4bb7f539ead5d563e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45bba57e5ecb6a480a6c48fcd5cf18f4') in 0.006368 seconds
+  Import took 0.008547 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000606 seconds.
+Registered in 0.000651 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.665 seconds
+- Completed reload, in  0.626 seconds
 Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1167 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.2 MB.
+System memory in use after: 84.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1679.
+Total: 1.542200 ms (FindLiveObjects: 0.116500 ms CreateObjectMapping: 0.029100 ms MarkObjects: 1.340100 ms  DeleteObjects: 0.055500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000711 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1166 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.9 MB.
-System memory in use after: 66.0 MB.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.648 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1167 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.2 MB.
+System memory in use after: 84.3 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1631.
-Total: 1.395800 ms (FindLiveObjects: 0.141300 ms CreateObjectMapping: 0.032000 ms MarkObjects: 1.181100 ms  DeleteObjects: 0.040600 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1682.
+Total: 1.460400 ms (FindLiveObjects: 0.138600 ms CreateObjectMapping: 0.029300 ms MarkObjects: 1.244200 ms  DeleteObjects: 0.047200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 387.802635 seconds.
+  path: Assets/Object/Enemy/script/zombie.cs
+  artifactKey: Guid(ac0d1bddab5d10b4bb7f539ead5d563e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Enemy/script/zombie.cs using Guid(ac0d1bddab5d10b4bb7f539ead5d563e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cef82fca54cc3006a4ce9510b108dfa') in 0.005753 seconds
+  Import took 0.007512 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
