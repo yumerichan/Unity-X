@@ -10,6 +10,7 @@ public class Paladin_Script : MonoBehaviour
     const float PLAYER_WALK_MOVE_POS = 0.03f;
     const float PLAYER_RUN_MOVE_POS = 0.1f;
     const float PLAYER_EVASION = 6.0f;
+    const float PLAYER_ATTACK_MOVE_POS = 0.04f;
 
     private Vector3 vPos;
     private Vector3 vOldPos;
@@ -23,7 +24,6 @@ public class Paladin_Script : MonoBehaviour
 
     private Rigidbody rigidbody_;
 
-    private bool AttackFlg = false;
     private bool AttakingFlg = false;
     private bool JumpFlg = false;
     private bool LookFlg = true;
@@ -110,6 +110,7 @@ public class Paladin_Script : MonoBehaviour
                 {
                     vMovePos.x -= PLAYER_CROUCH_MOVE_POS;
                 }
+
                 animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
                 animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
             }
@@ -119,6 +120,7 @@ public class Paladin_Script : MonoBehaviour
                 {
                     vMovePos.x -= PLAYER_WALK_MOVE_POS;
                 }
+
                 animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
                 animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
             }
@@ -143,15 +145,17 @@ public class Paladin_Script : MonoBehaviour
                 {
                     vMovePos.x += PLAYER_CROUCH_MOVE_POS;
                 }
+
                 animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
                 animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
             }
-            else
+            else if(animator_.GetBool(IsPlayerState[(int)PlayerState.RUN]) == false)
             {
                 if (AttakingFlg == false)
                 {
                     vMovePos.x += PLAYER_WALK_MOVE_POS;
                 }
+
                 animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
                 animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
             }
@@ -192,34 +196,52 @@ public class Paladin_Script : MonoBehaviour
             animator_.SetBool(IsPlayerState[(int)PlayerState.JUMP], false);
         }
 
+        if(AttakingFlg)
+        {
+            //アニメーションの時間でやりたい
+
+            //if(LookFlg)
+            //{
+            //    vMovePos.x += PLAYER_ATTACK_MOVE_POS;
+            //}
+            //else
+            //{
+            //    vMovePos.x -= PLAYER_ATTACK_MOVE_POS;
+            //}
+        }
+
         //攻撃
         if (IntervalFlg == false && Input.GetKey(KeyCode.T))
         {
-            AttackFlg = true;
-            //AttakingFlg = true;
+            NotAttackInterval = 0.0f;
+            animator_.SetBool(IsAttack, true);
+
+            AttakingFlg = true;
+
+            if (animator_.GetBool(IsPlayerState[(int)PlayerState.CROUCH]) == false)
+            {
+                AttackType++;
+            }
+
+            //最後
+            if (animator_.GetInteger("AttackType") == 7)
+            {
+                AttackType = 0;
+            }
+
+            animator_.SetInteger("AttackType", AttackType);
             IntervalFlg = true;
         }
         else if (IntervalFlg == true)
         {
             Interval += 1.0f / 60.0f;
 
+            AttakingFlg = false;
+
             if (Interval >= 0.7f)
             {
                 IntervalFlg = false;
                 Interval = 0.0f;
-            }
-        }
-
-        if (AttackFlg == true)
-        {
-            AttackFlg = false;
-            NotAttackInterval = 0.0f;
-            animator_.SetBool(IsAttack, true);
-
-            if (animator_.GetBool(IsPlayerState[(int)PlayerState.CROUCH]) == false)
-            {
-                AttackType++;
-                animator_.SetInteger("AttackType", AttackType);
             }
         }
 
@@ -235,23 +257,6 @@ public class Paladin_Script : MonoBehaviour
             }
         }
 
-        //最後
-        if (animator_.GetInteger("AttackType") == 7)
-        {
-            AttackType = -1;
-            animator_.SetInteger("AttackType", AttackType);
-            animator_.SetBool(IsAttack, false);
-            IntervalFlg = true;
-            Interval = -0.2f;
-        }
-
-        if (Input.GetKey(KeyCode.H))
-        {
-            animator_.SetBool(IsAttack, false);
-            AttackType = -1;
-            animator_.SetInteger("AttackType", AttackType);
-        }
-
         print(animator_.GetInteger("AttackType"));
 
         if (LookFlg == true)
@@ -265,6 +270,7 @@ public class Paladin_Script : MonoBehaviour
 
         vPos = vPos + vMovePos;
         vMovePos = new Vector3(0.0f, 0.0f, 0.0f);
+        vPos.z = 13.28368f;
         transform.position = vPos;
         rigidbody_.velocity = vVel;
         transform.rotation = vRot;
