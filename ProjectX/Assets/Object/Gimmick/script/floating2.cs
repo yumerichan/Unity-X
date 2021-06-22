@@ -2,45 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class floating2 : MonoBehaviour
 {
     bool IsUp;
     bool IsDown;
     // Start is called before the first frame update
     void Start()
     {
-      IsUp = true;
-      IsDown = false;
+        IsUp = true;
+        IsDown = false;
     }
-    
+
     // Update is called once per frame
     void Update()
     {
         Vector3 pos = transform.position;
-        
 
-
-        if (pos.x < 115)
+        if(IsUp)
         {
-            IsUp = true;
-            IsDown = false;
+            pos.y += 0.1f;
         }
-        else if (pos.x > 150)
+        if(IsDown)
+        {
+            pos.y -= 0.03f;
+        }
+        if(pos.y>13.0f)
         {
             IsUp = false;
             IsDown = true;
         }
+        else if(pos.y<6.0f)
+        {
+            IsDown = false;
+            IsUp = true;
+        }
 
-        if (IsUp)
-        {
-            pos.x += 0.5f;
-        }
-        else if (IsDown)
-        {
-            pos.x -= 0.5f;
-        }
+
+
 
         transform.position = pos;
-       
     }
 }
