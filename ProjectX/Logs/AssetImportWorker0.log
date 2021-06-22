@@ -1,0 +1,373 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.4f1 (0abb6314276a) revision 703331'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Education; OS build 17763.316; Version 1809; 64bit' Language: 'ja' Physical Memory: 16136 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/1909425/Desktop/Unity/ProjectX
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+52453
+Successfully changed project path to: C:/Users/1909425/Desktop/Unity/ProjectX
+C:/Users/1909425/Desktop/Unity/ProjectX
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 31.12 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.4f1 (0abb6314276a)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/1909425/Desktop/Unity/ProjectX/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA Quadro K620 (ID=0x13bb)
+    Vendor:   
+    VRAM:     2007 MB
+    Driver:   25.21.14.1881
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56808
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005081 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 31.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.591 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001706 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.982 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1165 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.2 MB.
+System memory in use after: 59.2 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1609.
+Total: 2.171500 ms (FindLiveObjects: 0.209800 ms CreateObjectMapping: 0.119200 ms MarkObjects: 1.745700 ms  DeleteObjects: 0.095500 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Object/Gimmick/script
+  artifactKey: Guid(d956d54a5391ac445ae7565c373e12bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Gimmick/script using Guid(d956d54a5391ac445ae7565c373e12bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fca1f3c09297d1f12d9f71f75272f436') in 0.008762 seconds
+  Import took 0.010955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/Object/Gimmick
+  artifactKey: Guid(93f9c14d3165c3f40be811cdab4d0b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Gimmick using Guid(93f9c14d3165c3f40be811cdab4d0b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83c2ae7bcade38ccf1c488b26863c359') in 0.005651 seconds
+  Import took 0.017226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.385665 seconds.
+  path: Assets/Object/Gimmick/script/floating2.cs
+  artifactKey: Guid(50eceff348226d24f86a0fe7916ec1a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Gimmick/script/floating2.cs using Guid(50eceff348226d24f86a0fe7916ec1a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa42d485942ee328c384416fb246d714') in 0.244664 seconds
+  Import took 0.247538 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001661 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.985 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1161 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.1 MB.
+System memory in use after: 59.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1613.
+Total: 2.155600 ms (FindLiveObjects: 0.173900 ms CreateObjectMapping: 0.078200 ms MarkObjects: 1.850000 ms  DeleteObjects: 0.052500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.882041 seconds.
+  path: Assets/Object/Gimmick/script/floating3.cs
+  artifactKey: Guid(5b372f9aa1c2c434abba57324675e437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Gimmick/script/floating3.cs using Guid(5b372f9aa1c2c434abba57324675e437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36e268115ae22876bd734e40973f51d4') in 0.008458 seconds
+  Import took 0.010939 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002027 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.997 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1161 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.2 MB.
+System memory in use after: 59.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1616.
+Total: 2.837600 ms (FindLiveObjects: 0.140500 ms CreateObjectMapping: 0.042300 ms MarkObjects: 2.551800 ms  DeleteObjects: 0.101600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1055.606167 seconds.
+  path: Assets/Object/Gimmick/script/floating2.cs
+  artifactKey: Guid(50eceff348226d24f86a0fe7916ec1a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Gimmick/script/floating2.cs using Guid(50eceff348226d24f86a0fe7916ec1a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63a4935b0454cd2a2f393094fcafc4a6') in 0.009531 seconds
+  Import took 0.012559 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.026150 seconds.
+  path: Assets/Object/Gimmick/script/floating2.cs
+  artifactKey: Guid(50eceff348226d24f86a0fe7916ec1a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Gimmick/script/floating2.cs using Guid(50eceff348226d24f86a0fe7916ec1a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63a4935b0454cd2a2f393094fcafc4a6') in 0.005992 seconds
+  Import took 0.008858 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001912 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.106 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1161 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.2 MB.
+System memory in use after: 59.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1619.
+Total: 1.972500 ms (FindLiveObjects: 0.151700 ms CreateObjectMapping: 0.039000 ms MarkObjects: 1.683900 ms  DeleteObjects: 0.096900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001612 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.952 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1161 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.2 MB.
+System memory in use after: 59.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1622.
+Total: 2.169400 ms (FindLiveObjects: 0.149900 ms CreateObjectMapping: 0.042000 ms MarkObjects: 1.903800 ms  DeleteObjects: 0.072700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 211.204081 seconds.
+  path: Assets/Object/Gimmick/script/floating2.cs
+  artifactKey: Guid(50eceff348226d24f86a0fe7916ec1a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Gimmick/script/floating2.cs using Guid(50eceff348226d24f86a0fe7916ec1a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73f9493dae84e04af69766a006e9373e') in 0.009207 seconds
+  Import took 0.012228 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/Object/Gimmick/script/floating3.cs
+  artifactKey: Guid(5b372f9aa1c2c434abba57324675e437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Gimmick/script/floating3.cs using Guid(5b372f9aa1c2c434abba57324675e437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34bbb40d266bc96febff70636643c783') in 0.005798 seconds
+  Import took 0.008081 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005310 seconds.
+  path: Assets/Object/Gimmick/script/floating3.cs
+  artifactKey: Guid(5b372f9aa1c2c434abba57324675e437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Gimmick/script/floating3.cs using Guid(5b372f9aa1c2c434abba57324675e437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34bbb40d266bc96febff70636643c783') in 0.006522 seconds
+  Import took 0.009315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1199.080092 seconds.
+  path: Assets/Object/Gimmick/script/floating1.cs
+  artifactKey: Guid(71132c6aa6395044c952146be1b67552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Gimmick/script/floating1.cs using Guid(71132c6aa6395044c952146be1b67552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '939b4d22040ca092aa138a9921f4a92d') in 0.010012 seconds
+  Import took 0.013053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001552 seconds.
+  path: Assets/Object/Gimmick/script/floating1.cs
+  artifactKey: Guid(71132c6aa6395044c952146be1b67552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Gimmick/script/floating1.cs using Guid(71132c6aa6395044c952146be1b67552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '939b4d22040ca092aa138a9921f4a92d') in 0.006479 seconds
+  Import took 0.008739 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001782 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.383 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.2 MB.
+System memory in use after: 59.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1626.
+Total: 1.841500 ms (FindLiveObjects: 0.179300 ms CreateObjectMapping: 0.042400 ms MarkObjects: 1.523000 ms  DeleteObjects: 0.095800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.922235 seconds.
+  path: Assets/Object/Gimmick/script/floating4.cs
+  artifactKey: Guid(cf297819976074d4f9757dbe3d68e9ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Gimmick/script/floating4.cs using Guid(cf297819976074d4f9757dbe3d68e9ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb7870d3cdb14caac0722dc5abea409c') in 0.008936 seconds
+  Import took 0.011162 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002835 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.200 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.2 MB.
+System memory in use after: 59.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1629.
+Total: 2.225200 ms (FindLiveObjects: 0.200700 ms CreateObjectMapping: 0.095100 ms MarkObjects: 1.860500 ms  DeleteObjects: 0.067600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 140.670026 seconds.
+  path: Assets/Object/Gimmick/script/floating4.cs
+  artifactKey: Guid(cf297819976074d4f9757dbe3d68e9ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Object/Gimmick/script/floating4.cs using Guid(cf297819976074d4f9757dbe3d68e9ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '483a1a93c7ba65146f06c915c76c59c3') in 0.008430 seconds
+  Import took 0.011145 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002105 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.333 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.2 MB.
+System memory in use after: 59.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1632.
+Total: 2.292800 ms (FindLiveObjects: 0.179000 ms CreateObjectMapping: 0.080600 ms MarkObjects: 1.958200 ms  DeleteObjects: 0.074100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001669 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.968 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.2 MB.
+System memory in use after: 59.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1635.
+Total: 2.154700 ms (FindLiveObjects: 0.159900 ms CreateObjectMapping: 0.042900 ms MarkObjects: 1.874600 ms  DeleteObjects: 0.076200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001719 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.981 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.2 MB.
+System memory in use after: 59.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1638.
+Total: 2.320500 ms (FindLiveObjects: 0.162500 ms CreateObjectMapping: 0.040900 ms MarkObjects: 2.042800 ms  DeleteObjects: 0.073000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001517 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.104 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.2 MB.
+System memory in use after: 59.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1641.
+Total: 2.037000 ms (FindLiveObjects: 0.170100 ms CreateObjectMapping: 0.042400 ms MarkObjects: 1.738700 ms  DeleteObjects: 0.084600 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
