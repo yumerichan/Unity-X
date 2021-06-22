@@ -10,7 +10,7 @@ public class Paladin_Script : MonoBehaviour
     const float PLAYER_WALK_MOVE_POS = 0.05f;
     const float PLAYER_RUN_MOVE_POS = 0.12f;
     const float PLAYER_EVASION = 12.0f;
-    const float PLAYER_ATTACK_MOVE_POS = 0.2f;
+    const float PLAYER_ATTACK_MOVE_POS = 0.08f;
 
     private Vector3 vPos;
     private Vector3 vOldPos;
@@ -210,7 +210,7 @@ public class Paladin_Script : MonoBehaviour
 
                 case 0:
                     {
-                        if(anim_info.normalizedTime > 0.3 && 0.36 > anim_info.normalizedTime)
+                        if(anim_info.normalizedTime > 0.3 && 0.4 > anim_info.normalizedTime)
                         {
                             AttackMove = true;
                         }
@@ -218,15 +218,7 @@ public class Paladin_Script : MonoBehaviour
                     break;
                 case 1:
                     {
-                        if (anim_info.normalizedTime > 0.3 && 0.36 > anim_info.normalizedTime)
-                        {
-                            AttackMove = true;
-                        }
-                    }
-                    break;
-                case 2:
-                    {
-                        if (anim_info.normalizedTime > 0.3 && 0.36 > anim_info.normalizedTime)
+                        if (anim_info.normalizedTime > 0.38 && 0.48 > anim_info.normalizedTime)
                         {
                             AttackMove = true;
                         }
@@ -234,7 +226,7 @@ public class Paladin_Script : MonoBehaviour
                     break;
                 case 3:
                     {
-                        if (anim_info.normalizedTime > 0.3 && 0.36 > anim_info.normalizedTime)
+                        if (anim_info.normalizedTime > 0.18 && 0.28 > anim_info.normalizedTime)
                         {
                             AttackMove = true;
                         }
@@ -242,15 +234,7 @@ public class Paladin_Script : MonoBehaviour
                     break;
                 case 4:
                     {
-                        if (anim_info.normalizedTime > 0.3 && 0.36 > anim_info.normalizedTime)
-                        {
-                            AttackMove = true;
-                        }
-                    }
-                    break;
-                case 5:
-                    {
-                        if (anim_info.normalizedTime > 0.3 && 0.36 > anim_info.normalizedTime)
+                        if (anim_info.normalizedTime > 0.28 && 0.38 > anim_info.normalizedTime)
                         {
                             AttackMove = true;
                         }
@@ -258,7 +242,7 @@ public class Paladin_Script : MonoBehaviour
                     break;
                 case 6:
                     {
-                        if (anim_info.normalizedTime > 0.3 && 0.36 > anim_info.normalizedTime)
+                        if (anim_info.normalizedTime > 0.3 && 0.4 > anim_info.normalizedTime)
                         {
                             AttackMove = true;
                         }
