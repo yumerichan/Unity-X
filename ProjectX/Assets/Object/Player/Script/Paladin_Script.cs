@@ -6,11 +6,11 @@ public class Paladin_Script : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    const float PLAYER_CROUCH_MOVE_POS = 0.02f;
-    const float PLAYER_WALK_MOVE_POS = 0.03f;
-    const float PLAYER_RUN_MOVE_POS = 0.1f;
-    const float PLAYER_EVASION = 6.0f;
-    const float PLAYER_ATTACK_MOVE_POS = 0.04f;
+    const float PLAYER_CROUCH_MOVE_POS = 0.03f;
+    const float PLAYER_WALK_MOVE_POS = 0.05f;
+    const float PLAYER_RUN_MOVE_POS = 0.12f;
+    const float PLAYER_EVASION = 12.0f;
+    const float PLAYER_ATTACK_MOVE_POS = 0.2f;
 
     private Vector3 vPos;
     private Vector3 vOldPos;
@@ -28,8 +28,8 @@ public class Paladin_Script : MonoBehaviour
     private bool JumpFlg = false;
     private bool LookFlg = true;
     private bool CrouchFlg = false;
-    private bool IsAnime = false; //アニメ中で途中でフラグを折っては行けないものに
     private bool IntervalFlg = false;
+    private bool AttackMove = false;
     private int AttackType = -1;
     private bool IsNotAttack = false;
     private float NotAttackInterval = 0.0f;
@@ -176,7 +176,7 @@ public class Paladin_Script : MonoBehaviour
         //しゃがみまたはジャンプ
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (animator_.GetBool(IsPlayerState[(int)PlayerState.RUN]) == true)
+            if (JumpFlg == false && animator_.GetBool(IsPlayerState[(int)PlayerState.RUN]) == true)
             {
                 vVel.y = PLAYER_EVASION;
                 animator_.SetBool(IsPlayerState[(int)PlayerState.JUMP], true);
@@ -185,9 +185,15 @@ public class Paladin_Script : MonoBehaviour
             else
             {
                 if (animator_.GetBool(IsPlayerState[(int)PlayerState.CROUCH]) == false)
+                {
                     animator_.SetBool(IsPlayerState[(int)PlayerState.CROUCH], true);
+                    CrouchFlg = true;
+                }
                 else
+                {
                     animator_.SetBool(IsPlayerState[(int)PlayerState.CROUCH], false);
+                    CrouchFlg = false;
+                }
             }
         }
         else if (vVel.y <= 0.0f)
@@ -196,18 +202,88 @@ public class Paladin_Script : MonoBehaviour
             animator_.SetBool(IsPlayerState[(int)PlayerState.JUMP], false);
         }
 
-        if(AttakingFlg)
         {
-            //アニメーションの時間でやりたい
+            AnimatorStateInfo anim_info = animator_.GetCurrentAnimatorStateInfo(0);
+            switch (animator_.GetInteger("AttackType"))
+            {
 
-            //if(LookFlg)
-            //{
-            //    vMovePos.x += PLAYER_ATTACK_MOVE_POS;
-            //}
-            //else
-            //{
-            //    vMovePos.x -= PLAYER_ATTACK_MOVE_POS;
-            //}
+
+                case 0:
+                    {
+                        if(anim_info.normalizedTime > 0.3 && 0.36 > anim_info.normalizedTime)
+                        {
+                            AttackMove = true;
+                        }
+                    }
+                    break;
+                case 1:
+                    {
+                        if (anim_info.normalizedTime > 0.3 && 0.36 > anim_info.normalizedTime)
+                        {
+                            AttackMove = true;
+                        }
+                    }
+                    break;
+                case 2:
+                    {
+                        if (anim_info.normalizedTime > 0.3 && 0.36 > anim_info.normalizedTime)
+                        {
+                            AttackMove = true;
+                        }
+                    }
+                    break;
+                case 3:
+                    {
+                        if (anim_info.normalizedTime > 0.3 && 0.36 > anim_info.normalizedTime)
+                        {
+                            AttackMove = true;
+                        }
+                    }
+                    break;
+                case 4:
+                    {
+                        if (anim_info.normalizedTime > 0.3 && 0.36 > anim_info.normalizedTime)
+                        {
+                            AttackMove = true;
+                        }
+                    }
+                    break;
+                case 5:
+                    {
+                        if (anim_info.normalizedTime > 0.3 && 0.36 > anim_info.normalizedTime)
+                        {
+                            AttackMove = true;
+                        }
+                    }
+                    break;
+                case 6:
+                    {
+                        if (anim_info.normalizedTime > 0.3 && 0.36 > anim_info.normalizedTime)
+                        {
+                            AttackMove = true;
+                        }
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        if (AttackMove == true)
+        {
+            if (LookFlg)
+            {
+                vMovePos.x += PLAYER_ATTACK_MOVE_POS;
+
+                AttackMove = false;
+            }
+            else
+            {
+                vMovePos.x -= PLAYER_ATTACK_MOVE_POS;
+
+                AttackMove = false;
+            }
         }
 
         //攻撃
@@ -215,8 +291,6 @@ public class Paladin_Script : MonoBehaviour
         {
             NotAttackInterval = 0.0f;
             animator_.SetBool(IsAttack, true);
-
-            AttakingFlg = true;
 
             if (animator_.GetBool(IsPlayerState[(int)PlayerState.CROUCH]) == false)
             {
@@ -228,6 +302,8 @@ public class Paladin_Script : MonoBehaviour
             {
                 AttackType = 0;
             }
+
+            AttakingFlg = true;
 
             animator_.SetInteger("AttackType", AttackType);
             IntervalFlg = true;
