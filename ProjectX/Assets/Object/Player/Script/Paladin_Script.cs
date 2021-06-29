@@ -350,8 +350,17 @@ public class Paladin_Script : MonoBehaviour
         {
             transform.position = new Vector3(-140.5f, vPos.y, vPos.z);
         }
+
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            SetHp(10);
+        }
+
     }
-    public int GetHp()
+
+
+public int GetHp()
     {
         return player_HealthPoint;
     }
