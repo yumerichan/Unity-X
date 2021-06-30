@@ -191,8 +191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b431f1d19e591e447a5152a0409b9e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Life: 0
-  player_: {fileID: 0}
+  Life: 100
+  player_: {fileID: 692254797}
 --- !u!1 &145190104 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7735899802864210413, guid: 0f59263fa30c7624e92557741b3f9446, type: 3}
@@ -657,8 +657,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b431f1d19e591e447a5152a0409b9e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Life: 0
-  player_: {fileID: 0}
+  Life: 100
+  player_: {fileID: 692254797}
 --- !u!1 &532541719 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3859127825206141532, guid: e359fd7f015424048ac62a873e847b37, type: 3}
@@ -769,7 +769,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &611810804 stripped
 GameObject:
@@ -817,7 +817,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0f59263fa30c7624e92557741b3f9446, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0f59263fa30c7624e92557741b3f9446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1021,9 +1021,21 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 5610853314373272880, guid: 7ff0608ff17cc7b4ab69336ab0999ae5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5045
+      objectReference: {fileID: 0}
+    - target: {fileID: 5610853314373272880, guid: 7ff0608ff17cc7b4ab69336ab0999ae5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.71212
+      objectReference: {fileID: 0}
     - target: {fileID: 6086309101563859327, guid: 7ff0608ff17cc7b4ab69336ab0999ae5, type: 3}
       propertyPath: m_Name
       value: paladin_prop_j_nordstrom Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086309101563859327, guid: 7ff0608ff17cc7b4ab69336ab0999ae5, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6862704410280102853, guid: 7ff0608ff17cc7b4ab69336ab0999ae5, type: 3}
       propertyPath: m_RootOrder
@@ -1071,6 +1083,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ff0608ff17cc7b4ab69336ab0999ae5, type: 3}
+--- !u!1 &789320189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3929367070616724699, guid: 7ff0608ff17cc7b4ab69336ab0999ae5, type: 3}
+  m_PrefabInstance: {fileID: 789320188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &789320190
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789320189}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.30036515, y: 0.06170132, z: 1.0142862}
+  m_Center: {x: 0.7965743, y: 1.4115572, z: 0.2466178}
 --- !u!1001 &814470299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1080,7 +1110,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3142ed1ce607830468c578814d6e0c25, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3142ed1ce607830468c578814d6e0c25, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2027,7 +2057,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 10.861, y: -2.375, z: 0}
 --- !u!45 &1994366974
 Skybox:

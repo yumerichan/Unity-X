@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+    public AudioClip se_run;
+    public AudioClip se_walk;
+    public AudioClip se_jump;
+    private AudioSource audio_source;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio_source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,10 +39,12 @@ public class PlayerInput : MonoBehaviour
             if(run == true)
             {
                 move.x -= 3.0f;
+                audio_source.PlayOneShot(se_run);
             }
             else
             {
                 move.x -= 1.0f;
+                audio_source.PlayOneShot(se_walk);
             }
         
         }
@@ -48,10 +55,12 @@ public class PlayerInput : MonoBehaviour
             if (run == true)
             {
                 move.x += 3.0f;
+                audio_source.PlayOneShot(se_run);
             }
             else
             {
                 move.x += 1.0f;
+                audio_source.PlayOneShot(se_walk);
             }
         }
 
@@ -59,7 +68,7 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             //ƒWƒƒƒ“ƒv—Í‚ª‚Ù‚µ‚¢
-
+            audio_source.PlayOneShot(se_jump);
         }
 
         //‚µ‚á‚ª‚Ý
