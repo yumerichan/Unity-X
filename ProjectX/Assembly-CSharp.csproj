@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\LifeGauge.cs" />
     <Compile Include="Assets\Object\Player\Script\Player_Collision.cs" />
     <Compile Include="Assets\Object\Enemy\script\zombie.cs" />
+    <Compile Include="Assets\Object\Boss\Scripts\BossScript.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
