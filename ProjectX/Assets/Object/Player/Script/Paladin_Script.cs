@@ -6,10 +6,11 @@ public class Paladin_Script : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    const float PLAYER_CROUCH_MOVE_POS = 0.02f;
-    const float PLAYER_WALK_MOVE_POS = 0.03f;
-    const float PLAYER_RUN_MOVE_POS = 0.1f;
-    const float PLAYER_EVASION = 6.0f;
+    const float PLAYER_CROUCH_MOVE_POS = 0.03f;
+    const float PLAYER_WALK_MOVE_POS = 0.05f;
+    const float PLAYER_RUN_MOVE_POS = 0.12f;
+    const float PLAYER_EVASION = 12.0f;
+    const float PLAYER_ATTACK_MOVE_POS = 0.08f;
 
     private Vector3 vPos;
     private Vector3 vOldPos;
@@ -23,13 +24,12 @@ public class Paladin_Script : MonoBehaviour
 
     private Rigidbody rigidbody_;
 
-    private bool AttackFlg = false;
     private bool AttakingFlg = false;
     private bool JumpFlg = false;
     private bool LookFlg = true;
     private bool CrouchFlg = false;
-    private bool IsAnime = false; //アニメ中で途中でフラグを折っては行けないものに
     private bool IntervalFlg = false;
+    private bool AttackMove = false;
     private int AttackType = -1;
     private bool IsNotAttack = false;
     private float NotAttackInterval = 0.0f;
@@ -110,6 +110,7 @@ public class Paladin_Script : MonoBehaviour
                 {
                     vMovePos.x -= PLAYER_CROUCH_MOVE_POS;
                 }
+
                 animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
                 animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
             }
@@ -119,6 +120,7 @@ public class Paladin_Script : MonoBehaviour
                 {
                     vMovePos.x -= PLAYER_WALK_MOVE_POS;
                 }
+
                 animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
                 animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
             }
@@ -143,15 +145,17 @@ public class Paladin_Script : MonoBehaviour
                 {
                     vMovePos.x += PLAYER_CROUCH_MOVE_POS;
                 }
+
                 animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
                 animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
             }
-            else
+            else if(animator_.GetBool(IsPlayerState[(int)PlayerState.RUN]) == false)
             {
                 if (AttakingFlg == false)
                 {
                     vMovePos.x += PLAYER_WALK_MOVE_POS;
                 }
+
                 animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
                 animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
             }
@@ -172,7 +176,7 @@ public class Paladin_Script : MonoBehaviour
         //しゃがみまたはジャンプ
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (animator_.GetBool(IsPlayerState[(int)PlayerState.RUN]) == true)
+            if (JumpFlg == false && animator_.GetBool(IsPlayerState[(int)PlayerState.RUN]) == true)
             {
                 vVel.y = PLAYER_EVASION;
                 animator_.SetBool(IsPlayerState[(int)PlayerState.JUMP], true);
@@ -181,9 +185,15 @@ public class Paladin_Script : MonoBehaviour
             else
             {
                 if (animator_.GetBool(IsPlayerState[(int)PlayerState.CROUCH]) == false)
+                {
                     animator_.SetBool(IsPlayerState[(int)PlayerState.CROUCH], true);
+                    CrouchFlg = true;
+                }
                 else
+                {
                     animator_.SetBool(IsPlayerState[(int)PlayerState.CROUCH], false);
+                    CrouchFlg = false;
+                }
             }
         }
         else if (vVel.y <= 0.0f)
@@ -192,34 +202,106 @@ public class Paladin_Script : MonoBehaviour
             animator_.SetBool(IsPlayerState[(int)PlayerState.JUMP], false);
         }
 
-        //攻撃
-        if (IntervalFlg == false && Input.GetKey(KeyCode.T))
         {
-            AttackFlg = true;
-            //AttakingFlg = true;
-            IntervalFlg = true;
-        }
-        else if (IntervalFlg == true)
-        {
-            Interval += 1.0f / 60.0f;
-
-            if (Interval >= 0.7f)
+            AnimatorStateInfo anim_info = animator_.GetCurrentAnimatorStateInfo(0);
+            switch (animator_.GetInteger("AttackType"))
             {
-                IntervalFlg = false;
-                Interval = 0.0f;
+
+
+                case 0:
+                    {
+                        if(anim_info.normalizedTime > 0.3 && 0.4 > anim_info.normalizedTime)
+                        {
+                            AttackMove = true;
+                        }
+                    }
+                    break;
+                case 1:
+                    {
+                        if (anim_info.normalizedTime > 0.38 && 0.48 > anim_info.normalizedTime)
+                        {
+                            AttackMove = true;
+                        }
+                    }
+                    break;
+                case 3:
+                    {
+                        if (anim_info.normalizedTime > 0.18 && 0.28 > anim_info.normalizedTime)
+                        {
+                            AttackMove = true;
+                        }
+                    }
+                    break;
+                case 4:
+                    {
+                        if (anim_info.normalizedTime > 0.28 && 0.38 > anim_info.normalizedTime)
+                        {
+                            AttackMove = true;
+                        }
+                    }
+                    break;
+                case 6:
+                    {
+                        if (anim_info.normalizedTime > 0.3 && 0.4 > anim_info.normalizedTime)
+                        {
+                            AttackMove = true;
+                        }
+                    }
+                    break;
+
+                default:
+                    break;
             }
         }
 
-        if (AttackFlg == true)
+        if (AttackMove == true)
         {
-            AttackFlg = false;
+            if (LookFlg)
+            {
+                vMovePos.x += PLAYER_ATTACK_MOVE_POS;
+
+                AttackMove = false;
+            }
+            else
+            {
+                vMovePos.x -= PLAYER_ATTACK_MOVE_POS;
+
+                AttackMove = false;
+            }
+        }
+
+        //攻撃
+        if (IntervalFlg == false && Input.GetKey(KeyCode.T))
+        {
             NotAttackInterval = 0.0f;
             animator_.SetBool(IsAttack, true);
 
             if (animator_.GetBool(IsPlayerState[(int)PlayerState.CROUCH]) == false)
             {
                 AttackType++;
-                animator_.SetInteger("AttackType", AttackType);
+            }
+
+            //最後
+            if (animator_.GetInteger("AttackType") == 7)
+            {
+                AttackType = 0;
+            }
+
+            AttakingFlg = true;
+
+            animator_.SetInteger("AttackType", AttackType);
+            IntervalFlg = true;
+        }
+        else if (IntervalFlg == true)
+        {
+            Interval += 1.0f / 60.0f;
+
+            AttakingFlg = false;
+
+            if (Interval >= 0.7f)
+            {
+                IntervalFlg = false;
+                Interval = 0.0f;
             }
         }
 
@@ -235,23 +317,6 @@ public class Paladin_Script : MonoBehaviour
             }
         }
 
-        //最後
-        if (animator_.GetInteger("AttackType") == 7)
-        {
-            AttackType = -1;
-            animator_.SetInteger("AttackType", AttackType);
-            animator_.SetBool(IsAttack, false);
-            IntervalFlg = true;
-            Interval = -0.2f;
-        }
-
-        if (Input.GetKey(KeyCode.H))
-        {
-            animator_.SetBool(IsAttack, false);
-            AttackType = -1;
-            animator_.SetInteger("AttackType", AttackType);
-        }
-
         print(animator_.GetInteger("AttackType"));
 
         if (LookFlg == true)
@@ -265,24 +330,37 @@ public class Paladin_Script : MonoBehaviour
 
         vPos = vPos + vMovePos;
         vMovePos = new Vector3(0.0f, 0.0f, 0.0f);
+        vPos.z = 13.28368f;
         transform.position = vPos;
         rigidbody_.velocity = vVel;
         transform.rotation = vRot;
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    // 相手の名前を取得
-    //    string name = collision.gameObject.name;
+    private void OnCollisionEnter(Collision collision)
+    {
+        // 相手の名前を取得
+        string name = collision.gameObject.name;
 
-    //    相手の名前がStageだった時
-    //    if (name == "Stage")
-    //    {
-    //        JumpFlg = true;
-    //        animator_.SetBool(IsFall, false);
-    //    }
-    //}
-    public int GetHp()
+        if (name == "goal1_2")
+        {
+            transform.position = new Vector3(162.5f, vPos.y, vPos.z);
+        }
+
+        else if (name == "goal1_3")
+        {
+            transform.position = new Vector3(-140.5f, vPos.y, vPos.z);
+        }
+
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            SetHp(10);
+        }
+
+    }
+
+
+public int GetHp()
     {
         return player_HealthPoint;
     }

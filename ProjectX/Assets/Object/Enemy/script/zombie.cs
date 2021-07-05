@@ -61,4 +61,6 @@ public class zombie : MonoBehaviour
         ans = Mathf.Sqrt(x * x + y * y + z * z);
         return ans;
     }
+
+    
 }
