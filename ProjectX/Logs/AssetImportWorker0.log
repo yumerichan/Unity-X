@@ -1,37 +1,46 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.4f1 (0abb6314276a) revision 703331'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 18363.1440; Version 1909; 64bit' Language: 'ja' Physical Memory: 16285 MB
+OS: 'Windows 10 Home; OS build 19042.1052; Version 2009; 64bit' Language: 'ja' Physical Memory: 8118 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-D:\Unity\2020.3.4f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2020.3.4f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/Git LFS/Unity-X/ProjectX
+C:/Users/owner/Documents/GitHub/Unity-X/ProjectX
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< HEAD
 51245
 Successfully changed project path to: D:/Git LFS/Unity-X/ProjectX
 D:/Git LFS/Unity-X/ProjectX
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 36.05 ms, found 0 plugins.
+=======
+53365
+Successfully changed project path to: C:/Users/owner/Documents/GitHub/Unity-X/ProjectX
+C:/Users/owner/Documents/GitHub/Unity-X/ProjectX
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 65.83 ms, found 0 plugins.
+>>>>>>> 0a478bc30a1b9e01a6d08f5749adaf0990cb2070
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.4f1 (0abb6314276a)
-[Subsystems] Discovering subsystems at path D:/Unity/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Git LFS/Unity-X/ProjectX/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/owner/Documents/GitHub/Unity-X/ProjectX/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1070 (ID=0x1b81)
+    Renderer: Intel(R) UHD Graphics 620 (ID=0x5917)
     Vendor:   
-    VRAM:     8088 MB
-    Driver:   27.21.14.5671
+    VRAM:     4059 MB
+    Driver:   27.20.100.9171
 Initialize mono
+<<<<<<< HEAD
 Mono path[0] = 'D:/Unity/2020.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
@@ -59,11 +68,41 @@ Platform modules already initialized, skipping
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
 Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+=======
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56200
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006744 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 106.29 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1170 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 62.1 MB.
-System memory in use after: 62.1 MB.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.328 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003297 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.112 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.19 seconds
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+>>>>>>> 0a478bc30a1b9e01a6d08f5749adaf0990cb2070
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1171 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71.4 MB.
+System memory in use after: 71.4 MB.
 
+<<<<<<< HEAD
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1614.
 Total: 1.914500 ms (FindLiveObjects: 0.131000 ms CreateObjectMapping: 0.044400 ms MarkObjects: 1.610900 ms  DeleteObjects: 0.127200 ms)
 
@@ -89,5 +128,104 @@ Received Import Request.
   artifactKey: Guid(8efee108c62563f4bb1f5395dde3f9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Object/Enemy/Animetion/zombe.controller using Guid(8efee108c62563f4bb1f5395dde3f9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '442d5472c8f251ca21a46aef16846c83') in 0.012214 seconds
   Import took 0.014887 seconds .
+=======
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1629.
+Total: 4.815200 ms (FindLiveObjects: 0.563400 ms CreateObjectMapping: 0.177500 ms MarkObjects: 3.749200 ms  DeleteObjects: 0.322700 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/MainScene.unity
+  artifactKey: Guid(ed251e05d04722245b49e36f066b3186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainScene.unity using Guid(ed251e05d04722245b49e36f066b3186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70c5c00919d41b523e0c589a1a65e425') in 0.039994 seconds
+  Import took 0.049097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.127479 seconds.
+  path: Assets/TexTure/UiTexture/LifeGauge/BlueGauge.png
+  artifactKey: Guid(6de0d5d16c3472b49aea78d8066da5b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TexTure/UiTexture/LifeGauge/BlueGauge.png using Guid(6de0d5d16c3472b49aea78d8066da5b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82afb2c5b7558e3f83ad1dc3e386de8f') in 1.477780 seconds
+  Import took 1.482759 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000823 seconds.
+  path: Assets/TexTure/UiTexture/LifeGauge/GaugeFrame.png
+  artifactKey: Guid(3e9ac9ab5a20fa84ba4da7d5ce85975c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TexTure/UiTexture/LifeGauge/GaugeFrame.png using Guid(3e9ac9ab5a20fa84ba4da7d5ce85975c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7d47d020d828bd4014ffa6a25732208') in 0.029592 seconds
+  Import took 0.035268 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000524 seconds.
+  path: Assets/TexTure/UiTexture/LifeGauge/GreenGauge.png
+  artifactKey: Guid(546485aa49203b64dbda45e98e7e6505) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TexTure/UiTexture/LifeGauge/GreenGauge.png using Guid(546485aa49203b64dbda45e98e7e6505) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b559bd8587775adf14b07178a0185a5') in 0.028493 seconds
+  Import took 0.033997 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001149 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.956 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1166 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 74.4 MB.
+System memory in use after: 74.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1638.
+Total: 2.623100 ms (FindLiveObjects: 0.291700 ms CreateObjectMapping: 0.088900 ms MarkObjects: 2.167900 ms  DeleteObjects: 0.073000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2207.905794 seconds.
+  path: Assets/TexTure/UiTexture/Clear/ClearBG.png
+  artifactKey: Guid(cf0a4d0793fd2b5439738e0a3afa6392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TexTure/UiTexture/Clear/ClearBG.png using Guid(cf0a4d0793fd2b5439738e0a3afa6392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abede14609d4959f5d84b1975c504543') in 1.574210 seconds
+  Import took 1.580797 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000709 seconds.
+  path: Assets/TexTure/UiTexture/Title/TitleBG.png
+  artifactKey: Guid(56573f16d88179a4b8a4c526fda29039) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TexTure/UiTexture/Title/TitleBG.png using Guid(56573f16d88179a4b8a4c526fda29039) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '160fdf8b0a33ef6d9fe68ddc18e86c81') in 0.033005 seconds
+  Import took 0.037796 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000734 seconds.
+  path: Assets/TexTure/UiTexture/Gameover/GameoverBG.png
+  artifactKey: Guid(7ff8d1f746f1de648a7b7ad77910b100) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TexTure/UiTexture/Gameover/GameoverBG.png using Guid(7ff8d1f746f1de648a7b7ad77910b100) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc775c81b603542eaba5890ab750b84d') in 0.036315 seconds
+  Import took 0.041621 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002073 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.901 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.84 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1166 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 74.4 MB.
+System memory in use after: 74.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1644.
+Total: 3.903300 ms (FindLiveObjects: 0.313900 ms CreateObjectMapping: 0.136800 ms MarkObjects: 3.332300 ms  DeleteObjects: 0.117900 ms)
+>>>>>>> 0a478bc30a1b9e01a6d08f5749adaf0990cb2070
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
