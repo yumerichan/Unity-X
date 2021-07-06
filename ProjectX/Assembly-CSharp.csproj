@@ -62,6 +62,7 @@
     <Compile Include="Assets\Object\Gimmick\script\floating1.cs" />
     <Compile Include="Assets\Object\Player\Script\Paladin_Camera_Normal.cs" />
     <Compile Include="Assets\Object\Enemy\script\EnemyCollision.cs" />
+    <Compile Include="Assets\Object\Boss\Scripts\BossScript.cs" />
     <Compile Include="Assets\Object\Gimmick\script\floating3.cs" />
     <Compile Include="Assets\Object\Player\Script\Paladin_Script.cs" />
     <Compile Include="Assets\Scripts\GameoverScene.cs" />
@@ -73,10 +74,10 @@
     <Compile Include="Assets\Object\Gimmick\script\floating4.cs" />
     <Compile Include="Assets\Scripts\ClearScene.cs" />
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\EnemyLifeGauge.cs" />
     <Compile Include="Assets\Scripts\LifeGauge.cs" />
     <Compile Include="Assets\Object\Player\Script\Player_Collision.cs" />
     <Compile Include="Assets\Object\Enemy\script\zombie.cs" />
-    <Compile Include="Assets\Scripts\EnemyLifeGauge.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
