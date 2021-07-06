@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Stage
   - Boss
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX

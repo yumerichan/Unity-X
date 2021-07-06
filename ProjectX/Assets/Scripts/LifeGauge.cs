@@ -20,7 +20,6 @@ public class LifeGauge : MonoBehaviour
     {
         Life = player_.GetHp();
 
-        player_.SetHp(Life);
         _image.fillAmount = Life / 100.0f;
     }
 }

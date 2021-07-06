@@ -17,7 +17,7 @@ public class ClearScene : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene("TitleScene");
+            FadeManager.Instance.LoadLevel("TitleScene", 2.0f);
         }
     }
 }

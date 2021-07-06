@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossScript : MonoBehaviour
 {
@@ -20,10 +21,11 @@ public class BossScript : MonoBehaviour
         MELEEATTACK,
     };
 
-    private float WALK_SPEED = 0.03f;
+    public int Boss_Hp = 100;
     private float RUN_SPEED = 0.032f;
     private bool LookFlg = false;
     private bool AttackFlg = false;
+    private bool IsDeath = false;
 
     private string[] IsBossState = new string[] {"IsWalking", "IsRunning", "IsJump",
         "IsAttack", "IsKick", "IsMelee", "IsMeleeAttack", };
@@ -45,9 +47,9 @@ public class BossScript : MonoBehaviour
     void Update()
     {
         //////ボスステージに入ってる
-        //if (!player_.GetCheckBossStage()) return;
+        if (!player_.GetCheckBossStage()) return;
 
-
+        if (IsDeath) return;
        
         //ボス
         Vector3 vPos = transform.position;
@@ -59,59 +61,61 @@ public class BossScript : MonoBehaviour
         //距離
         float Distance = SubDistance(vP_Pos, vPos);
 
-        Debug.Log(Distance);
+        Debug.Log(Boss_Hp);
 
         if(Distance > 2.3f)
         {
-            if(LookFlg)
-            {
-                vPos.x -= RUN_SPEED;
-            }
-            else
-            {
-                vPos.x += RUN_SPEED;
-            }
+            animator_.SetBool(IsBossState[(int)state_], false);
+            if (LookFlg)
+                {
+                    vPos.x -= RUN_SPEED;
+                }
+                else
+                {
+                    vPos.x += RUN_SPEED;
+                }
+            Attack_Interval = 0.0f;
 
-            state_ = BossState.WALK;
+           state_ = BossState.WALK;
             animator_.SetBool(IsBossState[(int)state_], true);
         }
         else
         {
             Attack_Interval += 1.0f / 60.0f;
 
-            if (Attack_Interval > 3.0f)
+            if (Attack_Interval > 4.0f)
             {
-
                 animator_.SetBool(IsBossState[(int)state_], false);
 
-                int number = (int)Random.Range(1.0f, 4.0f);
-
-                switch (number)
-                {
-                    case 1:
-                        {
-                            state_ = BossState.ATTACK;
-                        }
-                        break;
-                    case 2:
-                        {
-                            state_ = BossState.MELEE;
-                        }
-                        break;
-                    case 3:
-                        {
-                            state_ = BossState.MELEEATTACK;
-                        }
-                        break;
-                    case 4:
-                        {
-                            state_ = BossState.KICK;
-                        }
-                        break;
-                }
-
+                state_ = BossState.ATTACK;
+                AttackFlg = true;
+                Attack_Interval = 0.0f;
                 animator_.SetBool(IsBossState[(int)state_], true);
             }
+        }
+
+        if(AttackFlg)
+        {
+            AnimatorStateInfo info_ = animator_.GetCurrentAnimatorStateInfo(0);
+
+            if(info_.normalizedTime >= 0.94f)
+            {
+                AttackFlg = false;
+            }
+            else
+            {
+                for(int i= 0; i < 7;i++)
+                {
+                    animator_.SetBool(i, false);
+                }
+            }
+        }
+
+        if(Boss_Hp <= 0)
+        {
+            IsDeath = true;
+            Destroy(gameObject);
+            FadeManager.Instance.LoadLevel("ClearScene", 2.0f);
         }
 
         if (vPos.x < vP_Pos.x)
@@ -125,13 +129,20 @@ public class BossScript : MonoBehaviour
             LookFlg = true;
         }
 
+        if (Input.GetKey(KeyCode.K))
+        {
+            Boss_Hp --;
+        }
+
         transform.position = vPos;
         transform.rotation = vRot;
     }
 
+    
+
     float SubDistance(Vector3 a, Vector3 b)
     {
-        float ans = 0;
+        float ans;
         float x, y, z;
         x = a.x - b.x;
         y = a.y - b.y;
@@ -139,5 +150,14 @@ public class BossScript : MonoBehaviour
 
         ans = Mathf.Sqrt(x * x + y * y + z * z);
         return ans;
+    }
+
+    public int GetHp()
+    {
+        return Boss_Hp;
+    }
+    public void SetHp(int hp)
+    {
+        Boss_Hp = hp;
     }
 }

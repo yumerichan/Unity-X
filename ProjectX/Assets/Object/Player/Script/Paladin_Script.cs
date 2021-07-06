@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Paladin_Script : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -33,7 +33,10 @@ public class Paladin_Script : MonoBehaviour
     private int AttackType = -1;
     private bool IsNotAttack = false;
     private float NotAttackInterval = 0.0f;
-    private bool InBossStage = false;
+    private bool InBossStage = true;
+    private bool IsDamage = false;
+    private float DamageInterVal = 0.0f;
+    private bool IsDeath = false;
 
     public Vector3 Gravity_ = new Vector3( 0.0f, -20.0f, 0.0f );
 
@@ -81,6 +84,8 @@ public class Paladin_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (IsDeath) return;
+
         vOldPos = vPos = transform.position;
         vVel = rigidbody_.velocity;
         vRot = transform.rotation;
@@ -89,6 +94,8 @@ public class Paladin_Script : MonoBehaviour
         {
             //”à‚É“ü‚è‚½‚¢
         }
+
+        animator_.SetBool(IsPlayerState[(int)PlayerState.DAMAGE], false); 
 
         //¶‰EˆÚ“®
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -304,7 +311,12 @@ public class Paladin_Script : MonoBehaviour
             }
         }
 
-        if (animator_.GetBool(IsAttack) == true)
+        if (Input.GetKey(KeyCode.N))
+        {
+            animator_.SetBool(IsPlayerState[(int)PlayerState.DAMAGE], true);
+        }
+
+            if (animator_.GetBool(IsAttack) == true)
         {
             NotAttackInterval += 1.0f / 60.0f;
 
@@ -316,7 +328,7 @@ public class Paladin_Script : MonoBehaviour
             }
         }
 
-        print(animator_.GetInteger("AttackType"));
+        //print(animator_.GetInteger("AttackType"));
 
         if (LookFlg == true)
         {
@@ -325,6 +337,23 @@ public class Paladin_Script : MonoBehaviour
         else
         {
             vRot.Set(0.0f, -1.0f, 0.0f, 1);
+        }
+
+        if(IsDamage)
+        {
+            DamageInterVal += 1.0f / 60.0f;
+
+            if(DamageInterVal >= 2.0f)
+            {
+                IsDamage = false;
+                DamageInterVal = 0.0f;
+            }
+        }
+
+        if(player_HealthPoint <= 0)
+        {
+            IsDeath = true;
+            FadeManager.Instance.LoadLevel("GameoverScene", 2.0f);
         }
 
         vPos = vPos + vMovePos;
@@ -355,9 +384,12 @@ public class Paladin_Script : MonoBehaviour
             JumpFlg = false;
         }
 
+        if (IsDamage) return;
+
         if (collision.gameObject.tag == "Enemy")
         {
-            SetHp(10);
+            player_HealthPoint -= 50;
+            IsDamage = true;
         }
 
     }
