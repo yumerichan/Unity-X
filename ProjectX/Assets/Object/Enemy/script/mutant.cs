@@ -24,8 +24,8 @@ public class mutant : MonoBehaviour
 
         float DistanceE2P = SubDistance(Pos, pos);
 
-
-
+        Debug.Log(DistanceE2P);
+      
 
         if(DistanceE2P<5)
         {
