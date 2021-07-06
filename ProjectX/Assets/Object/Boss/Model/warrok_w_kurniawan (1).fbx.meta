@@ -6,12 +6,7 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: warrok_MAT
-    second: {fileID: 2100000, guid: 5221a2714b51c1a49ade847104748c39, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -20,29 +20,35 @@ public class BossScript : MonoBehaviour
         MELEEATTACK,
     };
 
-    private float WALK_SPEED = 0.02f;
-    private float RUN_SPEED = 0.025f;
+    private float WALK_SPEED = 0.03f;
+    private float RUN_SPEED = 0.032f;
     private bool LookFlg = false;
+    private bool AttackFlg = false;
 
-    private string[] IsBossState = new string[] {"Is Walking", "Is Running", "Is Jump",
-        "Is Attack", "Is Kick", "Is Melee", "Is MeleeAttack", };
+    private string[] IsBossState = new string[] {"IsWalking", "IsRunning", "IsJump",
+        "IsAttack", "IsKick", "IsMelee", "IsMeleeAttack", };
 
     BossState state_;
 
     float Attack_Interval;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
         animator_ = GetComponent<Animator>();
+        Attack_Interval = 3.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        ////ボスステージに入ってる
+        //////ボスステージに入ってる
         //if (!player_.GetCheckBossStage()) return;
 
+
+       
         //ボス
         Vector3 vPos = transform.position;
         Quaternion vRot = transform.rotation;
@@ -55,7 +61,7 @@ public class BossScript : MonoBehaviour
 
         Debug.Log(Distance);
 
-        if(Distance > 2.0f)
+        if(Distance > 2.3f)
         {
             if(LookFlg)
             {
@@ -66,18 +72,17 @@ public class BossScript : MonoBehaviour
                 vPos.x += RUN_SPEED;
             }
 
-            state_ = BossState.RUN;
+            state_ = BossState.WALK;
             animator_.SetBool(IsBossState[(int)state_], true);
         }
         else
         {
-            //animator_.SetBool(IsBossState[(int)state_], false);
-
             Attack_Interval += 1.0f / 60.0f;
-
 
             if (Attack_Interval > 3.0f)
             {
+
+                animator_.SetBool(IsBossState[(int)state_], false);
 
                 int number = (int)Random.Range(1.0f, 4.0f);
 
@@ -106,13 +111,6 @@ public class BossScript : MonoBehaviour
                 }
 
                 animator_.SetBool(IsBossState[(int)state_], true);
-            }
-            else
-            {
-                for (int i = 0; i < 8; i++)
-                {
-                    animator_.SetBool(i, false);
-                }
             }
         }
 

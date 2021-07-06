@@ -33,7 +33,7 @@ public class Paladin_Script : MonoBehaviour
     private int AttackType = -1;
     private bool IsNotAttack = false;
     private float NotAttackInterval = 0.0f;
-    private bool InBossStage = true;
+    private bool InBossStage = false;
 
     public Vector3 Gravity_ = new Vector3( 0.0f, -20.0f, 0.0f );
 
