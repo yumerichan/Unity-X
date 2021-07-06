@@ -33,6 +33,7 @@ public class Paladin_Script : MonoBehaviour
     private int AttackType = -1;
     private bool IsNotAttack = false;
     private float NotAttackInterval = 0.0f;
+    private bool InBossStage = true;
 
     public Vector3 Gravity_ = new Vector3( 0.0f, -20.0f, 0.0f );
 
@@ -139,16 +140,16 @@ public class Paladin_Script : MonoBehaviour
                 animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], true);
                 animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], false);
             }
-            else if (animator_.GetBool(IsPlayerState[(int)PlayerState.CROUCH]) == true)
-            {
-                if (AttakingFlg == false)
-                {
-                    vMovePos.x += PLAYER_CROUCH_MOVE_POS;
-                }
+            //else if (animator_.GetBool(IsPlayerState[(int)PlayerState.CROUCH]) == true)
+            //{
+            //    if (AttakingFlg == false)
+            //    {
+            //        vMovePos.x += PLAYER_CROUCH_MOVE_POS;
+            //    }
 
-                animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
-                animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
-            }
+            //    animator_.SetBool(IsPlayerState[(int)PlayerState.WALK], true);
+            //    animator_.SetBool(IsPlayerState[(int)PlayerState.RUN], false);
+            //}
             else if(animator_.GetBool(IsPlayerState[(int)PlayerState.RUN]) == false)
             {
                 if (AttakingFlg == false)
@@ -184,21 +185,20 @@ public class Paladin_Script : MonoBehaviour
             }
             else
             {
-                if (animator_.GetBool(IsPlayerState[(int)PlayerState.CROUCH]) == false)
-                {
-                    animator_.SetBool(IsPlayerState[(int)PlayerState.CROUCH], true);
-                    CrouchFlg = true;
-                }
-                else
-                {
-                    animator_.SetBool(IsPlayerState[(int)PlayerState.CROUCH], false);
-                    CrouchFlg = false;
-                }
+                //if (animator_.GetBool(IsPlayerState[(int)PlayerState.CROUCH]) == false)
+                //{
+                //    animator_.SetBool(IsPlayerState[(int)PlayerState.CROUCH], true);
+                //    CrouchFlg = true;
+                //}
+                //else
+                //{
+                //    animator_.SetBool(IsPlayerState[(int)PlayerState.CROUCH], false);
+                //    CrouchFlg = false;
+                //}
             }
         }
         else if (vVel.y <= 0.0f)
         {
-            JumpFlg = false;
             animator_.SetBool(IsPlayerState[(int)PlayerState.JUMP], false);
         }
 
@@ -206,7 +206,6 @@ public class Paladin_Script : MonoBehaviour
             AnimatorStateInfo anim_info = animator_.GetCurrentAnimatorStateInfo(0);
             switch (animator_.GetInteger("AttackType"))
             {
-
 
                 case 0:
                     {
@@ -351,6 +350,10 @@ public class Paladin_Script : MonoBehaviour
             transform.position = new Vector3(-140.5f, vPos.y, vPos.z);
         }
 
+        if(collision.gameObject.tag == "Stage")
+        {
+            JumpFlg = false;
+        }
 
         if (collision.gameObject.tag == "Enemy")
         {
@@ -358,7 +361,6 @@ public class Paladin_Script : MonoBehaviour
         }
 
     }
-
 
 public int GetHp()
     {
@@ -371,5 +373,10 @@ public int GetHp()
     public Vector3 GetPos()
     {
         return transform.position;
+    }
+
+    public bool GetCheckBossStage()
+    {
+        return InBossStage;
     }
 }
