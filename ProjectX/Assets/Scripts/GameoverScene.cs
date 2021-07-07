@@ -5,18 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameoverScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene("TitleScene");
+            FadeManager.Instance.LoadLevel("TitleScene", 2.0f);
         }
     }
 }
