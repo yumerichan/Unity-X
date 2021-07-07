@@ -33,7 +33,7 @@ public class Paladin_Script : MonoBehaviour
     private int AttackType = -1;
     private bool IsNotAttack = false;
     private float NotAttackInterval = 0.0f;
-    private bool InBossStage = true;
+    private bool InBossStage = false;
     private bool IsDamage = false;
     private float DamageInterVal = 0.0f;
     private bool IsDeath = false;
@@ -188,7 +188,7 @@ public class Paladin_Script : MonoBehaviour
             {
                 vVel.y = PLAYER_EVASION;
                 animator_.SetBool(IsPlayerState[(int)PlayerState.JUMP], true);
-                JumpFlg = true;
+                //JumpFlg = true;
             }
             else
             {
@@ -350,7 +350,7 @@ public class Paladin_Script : MonoBehaviour
             }
         }
 
-        if(player_HealthPoint <= 0)
+        if(player_HealthPoint <= 0 || vPos.y <= -20.0f)
         {
             IsDeath = true;
             FadeManager.Instance.LoadLevel("GameoverScene", 2.0f);
@@ -380,12 +380,14 @@ public class Paladin_Script : MonoBehaviour
 
         else if (name == "goal1_L")
         {
-            transform.position = new Vector3(-280.0f, vPos.y, vPos.z);
+            transform.position = new Vector3(-477.1f, 4.0f, vPos.z);
+            InBossStage = true;
         }
 
         else if (name == "goal1_R")
         {
-            transform.position = new Vector3(-280.0f, vPos.y, vPos.z);
+            transform.position = new Vector3(-477.1f, 4.0f, vPos.z);
+            InBossStage = true;
         }
 
         if (collision.gameObject.tag == "Stage")

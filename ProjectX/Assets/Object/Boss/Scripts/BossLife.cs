@@ -24,16 +24,16 @@ public class BossLife : MonoBehaviour
     void Update()
     {
         ////ボスステージに入ってる
-        if (!player_.GetCheckBossStage()) return;
+        //if (!player_.GetCheckBossStage()) return;
 
-        if (!Initiaraiz)
-        {
-            _image.color = new Color(255.0f, 9.0f, 9.0f, 1.0f);
-            Initiaraiz = true;
-        }
+        //if (!Initiaraiz)
+        //{
+        //    _image.color = new Color(255.0f, 9.0f, 9.0f, 1.0f);
+        //    Initiaraiz = true;
+        //}
 
-        Life = boss_.GetHp();
+        //Life = boss_.GetHp();
 
-        _image.fillAmount = Life / 100.0f;
+        //_image.fillAmount = Life / 100.0f;
     }
 }
