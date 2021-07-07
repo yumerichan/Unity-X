@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sword
+  - Enemy
+  - Stage
+  - Boss
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX

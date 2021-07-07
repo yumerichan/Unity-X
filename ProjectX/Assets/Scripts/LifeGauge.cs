@@ -18,9 +18,8 @@ public class LifeGauge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Life = player_.GetHp();
+        Life = player_.GetHp();
 
-        //player_.SetHp(Life);
-        //_image.fillAmount = Life / 100.0f;
+        _image.fillAmount = Life / 100.0f;
     }
 }

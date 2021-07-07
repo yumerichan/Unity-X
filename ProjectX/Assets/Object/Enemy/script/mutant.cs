@@ -17,16 +17,15 @@ public class mutant : MonoBehaviour
     void Update()
     {
         Vector3 pos = transform.position;
-        Vector3 rot = transform.localEulerAngles;
-        Vector3 scale = transform.localScale;
+        Quaternion rot = transform.rotation;
 
 
         Vector3 Pos = player.GetPos();
 
         float DistanceE2P = SubDistance(Pos, pos);
 
-
-
+        Debug.Log(DistanceE2P);
+      
 
         if(DistanceE2P<5)
         {
@@ -47,8 +46,7 @@ public class mutant : MonoBehaviour
 
 
         transform.position = pos;
-        transform.localEulerAngles = rot;
-        transform.localScale = scale;
+        transform.rotation = rot;
     }
 
     float SubDistance(Vector3 a,Vector3 b)

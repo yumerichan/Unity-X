@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    bool IsUp;
+    bool IsDown;
     // Start is called before the first frame update
     void Start()
     {
-        
+      IsUp = true;
+      IsDown = false;
     }
-    bool IsUp=true;
-    bool IsDown=false;
+    
     // Update is called once per frame
     void Update()
     {
