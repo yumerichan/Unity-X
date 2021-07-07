@@ -19,7 +19,7 @@ public class Paladin_Script : MonoBehaviour
     private Vector3 vVel;
     private float Interval;
 
-    // Animator ƒRƒ“ƒ|[ƒlƒ“ƒg
+    // Animator 
     private Animator animator_;
 
     private Rigidbody rigidbody_;
@@ -40,7 +40,7 @@ public class Paladin_Script : MonoBehaviour
 
     public Vector3 Gravity_ = new Vector3( 0.0f, -20.0f, 0.0f );
 
-    //‘Ì—Í
+    //ï¿½Ì—ï¿½
     public int player_HealthPoint = 100;
 
     enum PlayerState
@@ -65,7 +65,7 @@ public class Paladin_Script : MonoBehaviour
         MELEE3,
     };
 
-    // İ’è‚µ‚½ƒtƒ‰ƒO‚Ì–¼‘O
+    // ï¿½İ’è‚µï¿½ï¿½ï¿½tï¿½ï¿½ï¿½Oï¿½Ì–ï¿½ï¿½O
     private string[] IsPlayerState = new string[] { "Is Runing", "Is Jumping" , "Is Walking" , "Is Damage" ,
     "Is Death","Is Trun","Is Crouch"};
 
@@ -73,7 +73,7 @@ public class Paladin_Script : MonoBehaviour
 
     void Start()
     {
-        //ƒvƒŒƒCƒ„[î•ñ
+        //ï¿½vï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½
         vPos = GetComponent<Transform>().position;
         rigidbody_ = GetComponent<Rigidbody>();
         this.animator_ = GetComponent<Animator>();
@@ -92,12 +92,12 @@ public class Paladin_Script : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            //”à‚É“ü‚è‚½‚¢
+            //ï¿½ï¿½É“ï¿½ï¿½è‚½ï¿½ï¿½
         }
 
         animator_.SetBool(IsPlayerState[(int)PlayerState.DAMAGE], false); 
 
-        //¶‰EˆÚ“®
+        //ï¿½ï¿½ï¿½Eï¿½Ú“ï¿½
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             LookFlg = false;
@@ -181,7 +181,7 @@ public class Paladin_Script : MonoBehaviour
             }
         }
 
-        //‚µ‚á‚ª‚İ‚Ü‚½‚ÍƒWƒƒƒ“ƒv
+        //ï¿½ï¿½ï¿½á‚ªï¿½İ‚Ü‚ï¿½ï¿½ÍƒWï¿½ï¿½ï¿½ï¿½ï¿½v
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (JumpFlg == false && animator_.GetBool(IsPlayerState[(int)PlayerState.RUN]) == true)
@@ -276,7 +276,7 @@ public class Paladin_Script : MonoBehaviour
             }
         }
 
-        //UŒ‚
+        //ï¿½Uï¿½ï¿½
         if (IntervalFlg == false && Input.GetKey(KeyCode.T))
         {
             NotAttackInterval = 0.0f;
@@ -287,7 +287,7 @@ public class Paladin_Script : MonoBehaviour
                 AttackType++;
             }
 
-            //ÅŒã
+            //ï¿½ÅŒï¿½
             if (animator_.GetInteger("AttackType") == 7)
             {
                 AttackType = 0;
@@ -366,7 +366,6 @@ public class Paladin_Script : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // ‘Šè‚Ì–¼‘O‚ğæ“¾
         string name = collision.gameObject.name;
 
         if (name == "goal1_2")
@@ -379,7 +378,17 @@ public class Paladin_Script : MonoBehaviour
             transform.position = new Vector3(-140.5f, vPos.y, vPos.z);
         }
 
-        if(collision.gameObject.tag == "Stage")
+        else if (name == "goal1_L")
+        {
+            transform.position = new Vector3(-425.0f, vPos.y, vPos.z);
+        }
+
+        else if (name == "goal1_R")
+        {
+            transform.position = new Vector3(-425.0f, vPos.y, vPos.z);
+        }
+
+        if (collision.gameObject.tag == "Stage")
         {
             JumpFlg = false;
         }
