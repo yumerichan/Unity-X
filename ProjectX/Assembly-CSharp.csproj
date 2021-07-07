@@ -60,6 +60,7 @@
     <Compile Include="Assets\Object\Gimmick\script\floating2.cs" />
     <Compile Include="Assets\Object\Enemy\script\EnemyAttackCollision.cs" />
     <Compile Include="Assets\Object\Gimmick\script\floating1.cs" />
+    <Compile Include="Assets\Object\Boss\Scripts\BossCollision.cs" />
     <Compile Include="Assets\Object\Player\Script\Paladin_Camera_Normal.cs" />
     <Compile Include="Assets\Object\Enemy\script\EnemyCollision.cs" />
     <Compile Include="Assets\Object\Boss\Scripts\BossScript.cs" />
@@ -78,11 +79,16 @@
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\EnemyLifeGauge.cs" />
     <Compile Include="Assets\Scripts\LifeGauge.cs" />
+    <Compile Include="Assets\Object\Player\Script\EmptyCollision.cs" />
     <Compile Include="Assets\Object\Player\Script\Player_Collision.cs" />
     <Compile Include="Assets\Object\Enemy\script\zombie.cs" />
     <Compile Include="Assets\Object\Player\Script\SwordScript.cs" />
-    <Compile Include="Assets\Object\Player\Script\EmptyCollision.cs" />
-    <Compile Include="Assets\Object\Boss\Scripts\BossCollision.cs" />
+    <Compile Include="Assets\52SpecialEffectPack\EffectEditor\ShurikenEffectEditor\csShurikenEffectChanger.cs" />
+    <Compile Include="Assets\52SpecialEffectPack\EffectEditor\ShurikenEffectEditor\csShurikenEffectEditor.cs" />
+    <Compile Include="Assets\52SpecialEffectPack\Animation&amp;Script\csParticleMove.cs" />
+    <Compile Include="Assets\52SpecialEffectPack\Animation&amp;Script\csMouseOrbit.cs" />
+    <Compile Include="Assets\52SpecialEffectPack\Animation&amp;Script\csDestroyEffect.cs" />
+    <Compile Include="Assets\52SpecialEffectPack\Animation&amp;Script\csAnimationSpin.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
