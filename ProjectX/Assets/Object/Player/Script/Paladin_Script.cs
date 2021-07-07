@@ -40,7 +40,7 @@ public class Paladin_Script : MonoBehaviour
 
     public Vector3 Gravity_ = new Vector3( 0.0f, -20.0f, 0.0f );
 
-    //�̗�
+    //
     public int player_HealthPoint = 100;
 
     enum PlayerState
@@ -65,7 +65,7 @@ public class Paladin_Script : MonoBehaviour
         MELEE3,
     };
 
-    // �ݒ肵���t���O�̖��O
+    //
     private string[] IsPlayerState = new string[] { "Is Runing", "Is Jumping" , "Is Walking" , "Is Damage" ,
     "Is Death","Is Trun","Is Crouch"};
 
@@ -73,7 +73,7 @@ public class Paladin_Script : MonoBehaviour
 
     void Start()
     {
-        //�v���C���[���
+        //
         vPos = GetComponent<Transform>().position;
         rigidbody_ = GetComponent<Rigidbody>();
         this.animator_ = GetComponent<Animator>();
@@ -380,12 +380,12 @@ public class Paladin_Script : MonoBehaviour
 
         else if (name == "goal1_L")
         {
-            transform.position = new Vector3(-425.0f, vPos.y, vPos.z);
+            transform.position = new Vector3(-280.0f, vPos.y, vPos.z);
         }
 
         else if (name == "goal1_R")
         {
-            transform.position = new Vector3(-425.0f, vPos.y, vPos.z);
+            transform.position = new Vector3(-280.0f, vPos.y, vPos.z);
         }
 
         if (collision.gameObject.tag == "Stage")
