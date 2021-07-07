@@ -34,7 +34,7 @@ public class BossScript : MonoBehaviour
 
     float Attack_Interval;
 
-    
+    public BossAttack bossattack_;
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +63,7 @@ public class BossScript : MonoBehaviour
 
         Debug.Log(Boss_Hp);
 
-        if(Distance > 2.3f)
+        if(Distance > 3.3f)
         {
             animator_.SetBool(IsBossState[(int)state_], false);
             if (LookFlg)
@@ -74,10 +74,9 @@ public class BossScript : MonoBehaviour
                 {
                     vPos.x += RUN_SPEED;
                 }
-            Attack_Interval = 0.0f;
 
            state_ = BossState.WALK;
-            animator_.SetBool(IsBossState[(int)state_], true);
+           animator_.SetBool(IsBossState[(int)state_], true);
         }
         else
         {
@@ -98,9 +97,15 @@ public class BossScript : MonoBehaviour
         {
             AnimatorStateInfo info_ = animator_.GetCurrentAnimatorStateInfo(0);
 
+            if(info_.normalizedTime >= 0.34f && info_.normalizedTime <= 0.80f)
+            {
+                bossattack_.AttackStart();
+            }
+
             if(info_.normalizedTime >= 0.94f)
             {
                 AttackFlg = false;
+                bossattack_.AttackEnd();
             }
             else
             {
@@ -159,5 +164,10 @@ public class BossScript : MonoBehaviour
     public void SetHp(int hp)
     {
         Boss_Hp = hp;
+    }
+
+    public Vector3 GetPos()
+    {
+        return transform.position;
     }
 }

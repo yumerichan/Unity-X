@@ -67,6 +67,7 @@
     <Compile Include="Assets\Object\Boss\Scripts\BossLife.cs" />
     <Compile Include="Assets\Object\Player\Script\Paladin_Script.cs" />
     <Compile Include="Assets\Scripts\GameoverScene.cs" />
+    <Compile Include="Assets\Object\Boss\Scripts\BossAttack.cs" />
     <Compile Include="Assets\Scripts\FadeManager.cs" />
     <Compile Include="Assets\Scripts\TitleScene.cs" />
     <Compile Include="Assets\Object\Enemy\script\mutant.cs" />
@@ -80,7 +81,8 @@
     <Compile Include="Assets\Object\Player\Script\Player_Collision.cs" />
     <Compile Include="Assets\Object\Enemy\script\zombie.cs" />
     <Compile Include="Assets\Object\Player\Script\SwordScript.cs" />
-    <Compile Include="Assets\Object\Boss\Scripts\BossAttack.cs" />
+    <Compile Include="Assets\Object\Player\Script\EmptyCollision.cs" />
+    <Compile Include="Assets\Object\Boss\Scripts\BossCollision.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />

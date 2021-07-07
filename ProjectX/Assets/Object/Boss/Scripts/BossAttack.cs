@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class BossAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+	Collider m_Collider;
+
+	// Start is called before the first frame update
+	void Start()
     {
-        
-    }
+		m_Collider = GetComponent<Collider>();
+		m_Collider.enabled = false;
+	}
 
 	void OnTriggerEnter(Collider col)
 	{
@@ -24,6 +27,16 @@ public class BossAttack : MonoBehaviour
 		{
 			col.gameObject.GetComponent<Paladin_Script>().SetHp(col.gameObject.GetComponent<Paladin_Script>().GetHp() - 20);
 		}
+	}
+
+	public void AttackStart()
+    {
+		m_Collider.enabled = true;
+	}
+
+	public void AttackEnd()
+    {
+		m_Collider.enabled = false;
 	}
 
 }

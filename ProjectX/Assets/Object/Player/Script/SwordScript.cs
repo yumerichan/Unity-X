@@ -6,12 +6,14 @@ public class SwordScript : MonoBehaviour
 {
 	private float interval = 0.0f;
 
+	public BossScript boss_;
+
     // Start is called before the first frame update
     void OnTriggerEnter(Collider col)
 	{
 		if (col.tag == "Boss")
 		{
-			col.GetComponent<BossScript>().SetHp(col.GetComponent<BossScript>().GetHp() - 10);
+			boss_.SetHp(boss_.GetHp() - 7);
 		}
 	}
 
@@ -25,7 +27,7 @@ public class SwordScript : MonoBehaviour
 
 			if (col.tag == "Boss")
 			{
-				col.GetComponent<BossScript>().SetHp(col.GetComponent<BossScript>().GetHp() - 5);
+				boss_.SetHp(boss_.GetHp() - 2);
 			}
 		}
 	}
