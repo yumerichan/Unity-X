@@ -5,26 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< Updated upstream
       ticks: 637575014430881698
     m_Hash: 3471609300
-=======
-      ticks: 637575011820119257
-    m_Hash: 4070978512
->>>>>>> Stashed changes
   m_LockFileStatus:
     m_FilePath: "C:/Users/SyunF/OneDrive/\u30C7\u30B9\u30AF\u30C8\u30C3\u30D7/chi-mu/Unity-X/ProjectX/Packages/packages-lock.json"
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< Updated upstream
       ticks: 637575014430881698
     m_Hash: 2614832620
-=======
-      ticks: 637575011820119257
-    m_Hash: 2142867407
->>>>>>> Stashed changes
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -224,10 +214,7 @@ m_PackageAssets:
         - 3.0.4
         - 3.0.5
         - 3.0.6
-<<<<<<< Updated upstream
         - 3.0.7
-=======
->>>>>>> Stashed changes
         compatible:
         - 1.0.2
         - 1.0.6
@@ -253,10 +240,7 @@ m_PackageAssets:
         - 3.0.4
         - 3.0.5
         - 3.0.6
-<<<<<<< Updated upstream
         - 3.0.7
-=======
->>>>>>> Stashed changes
         verified: 2.0.7
       dependencies:
       - name: com.unity.test-framework
@@ -776,10 +760,7 @@ m_PackageAssets:
         - 1.6.0-pre.1
         - 1.6.0-pre.3
         - 1.6.0-pre.4
-<<<<<<< Updated upstream
         - 1.6.0-pre.5
-=======
->>>>>>> Stashed changes
         compatible:
         - 1.4.7
         - 1.4.8
@@ -798,10 +779,7 @@ m_PackageAssets:
         - 1.6.0-pre.1
         - 1.6.0-pre.3
         - 1.6.0-pre.4
-<<<<<<< Updated upstream
         - 1.6.0-pre.5
-=======
->>>>>>> Stashed changes
         verified: 1.4.8
       dependencies:
       - name: com.unity.modules.director
